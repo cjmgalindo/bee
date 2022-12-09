@@ -1,0 +1,50 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button{
+    @include flexbox();
+    position: relative;
+    
+
+    .icon{
+        position: absolute;
+        left: -0.5em;
+        top: 0.1em;
+        width: 3.5em;
+    }
+
+    .name{
+        position: absolute;
+        right: 1.3em;
+        top: 0.7em;
+        font-size: 1.5em;
+    }
+    .bgBtn{
+        width: 14.5em;
+        height: 4em;      
+    }
+}
+
+.MARKET{
+    .bgBtn{
+        width: 11.3em;
+           
+    }
+}
+.INVENTORY{
+    .bgBtn{
+        width: 13.3em;
+            
+    }
+}
+.EXCHANGE{
+    .bgBtn{
+        width: 12.9em;
+           
+    }
+}
+

@@ -1,0 +1,72 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card{
+    position: relative;
+    @include flexbox();
+    flex-direction: column;
+
+    h3{
+        font-family: "Hansip";
+        -webkit-text-stroke: 0px;
+        position: absolute;
+        top: 0.4em;
+    }
+
+    .targu{
+        position: absolute;
+
+        width: 9em;
+    }
+
+    .icon{
+        position: absolute;
+        top: 4em;
+        right: 0.5em;
+        @include flexbox();
+
+        img{
+            width: 3em;
+        }
+
+        span{
+            @include flexbox();
+            position: absolute;
+
+            padding: 0;
+            margin: 0;
+            line-height: 1em;
+            width: 2em;
+            top: -.7em;
+            background-color: #C0360F;
+            border: 1px solid black;
+            border-radius: 5px;
+            -webkit-text-stroke: 0px;            
+        }
+
+    }
+    .boxMarket{
+        width: 12em;
+    }
+
+
+    button{
+        position: absolute;
+        bottom: 1em;
+
+        @include flexbox();
+        img{
+            width: 10em;
+        }
+
+        h2{
+            position: absolute;
+            top: 0.2em;
+            font-size: 1.5em;
+        }
+    }
+}

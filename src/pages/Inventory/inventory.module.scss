@@ -1,0 +1,82 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cards{
+    
+    &::-webkit-scrollbar-track {
+        margin: .7em;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+        width: .4em
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5em;
+        background-color: #48556073;
+    }
+}
+.pageInventory{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),url(./assets/background.jpg);
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+
+    height: 100vh;
+    width: 100vw;
+
+    .sectionInventory{
+        height: 80vh;
+
+        @include flexbox();
+        flex-direction: column;
+
+        .boxSelect{
+            background-color: red;
+            width: 90%;
+            height: 10vh;
+
+        }
+        .boxCards{
+            @include flexbox();
+            flex-direction: column;
+
+            height: 70vh;
+            width: 100%;
+
+            .cards{
+                width: 90%;
+                height: 58vh;
+                background-color: blue;
+
+                border-radius: 15px;
+                border: 4px solid #ADAFAE;
+                background-color: rgba(173,177,173, .7);
+
+
+                display: grid;
+                grid-auto-rows: auto;
+                grid-template-columns: repeat(auto-fill, minmax(10em, 1fr ));
+                gap: .4em 1em;
+                
+                padding: .3em;
+                
+
+                overflow: hidden;
+                overflow-y: scroll;
+
+                img{
+                    width: 10.5em;
+                }
+            }
+            .page{
+                width: 80%;
+                height: 12vh;
+            }
+        }
+    }
+}

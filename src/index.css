@@ -1,13 +1,61 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  letter-spacing: -1px;
+
+  color: white;
+  -webkit-text-stroke: 2px #422205;
+  font-family: 'Scrubland';
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+
+ @font-face {
+    font-family: "Hansip";
+    src: local("Hansip"),url("./assets/fonts/Hansip.ttf");
+    font-weight: bold;
+  }
+@font-face {
+    font-family: "Scrubland";
+    src: url("./assets/fonts/Scrubland.ttf");
+  }
+
+  .message {
+    display: none;
+  }
+
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    * {
+        background-color: black;
+        color: white;
+     }
+    .App {
+      display: none;
+    }
+  
+    .message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100vh;
+      width: 100vw;
+
+      padding: 15px;
+
+      font-weight: 100;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      padding-top: 20px;
+    }
+    
+    .message::after {
+      Content: "Voltee su móvil en modo vertical para ver el contenido.";
+    }
+  }
+
+
+
+

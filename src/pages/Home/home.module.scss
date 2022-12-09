@@ -1,0 +1,89 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionHome{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),url(./assets/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+
+
+    
+
+    .boxWelcome{
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .boxEnter{
+            width: 50em;
+        }
+        .logo{
+            position: absolute;
+            top: 1em;
+
+            width: 12em;
+
+        }
+
+        .content{
+            position: absolute;
+
+            @include flexbox;
+            flex-direction: column;
+            h3{
+                color: #571F04;
+                -webkit-text-stroke: 0px;
+                letter-spacing: 0.01em;
+            }
+
+            .select{
+                border-radius: 15px;
+                border: 0.3em solid #561D05;
+                background-color: #CA6D28;
+                width: 27em;
+                height: 4em;
+            }
+
+            .btns{
+                @include flexbox;
+                flex-direction: column;
+
+                button{
+                    position: relative;
+                    
+                    @include flexbox;
+
+                    .btn{
+                        width: 22em;
+                    }
+                    p{
+                        position: absolute;
+                        top: 0.8em;
+                        font-size: 2em;
+
+                        color: #FFE9A4;
+                    }
+                }
+            }
+        }
+
+
+    }
+    span{
+        position: absolute;
+        bottom: 0em;
+
+        font-family: "Hansip";
+        font-size: 1.5em;
+
+        color: #6C665E;
+        -webkit-text-stroke: 0px #6C665E;
+
+    }
+}

@@ -1,0 +1,91 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageContinent{
+    background-image: url(./assets/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+
+    height: 100vh;
+    width: 100vw;
+
+
+    .sectionContinent{
+        height: 80vh;
+        width: 100%;
+
+        @include flexbox();
+
+        
+        .maps{
+            position: relative;
+
+            width: 80vw;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 40vh);
+            
+
+            
+            
+
+            img{
+                width: 19em;
+            }
+
+            div{
+                @include flexbox();
+                border: .5px solid black;
+            }
+
+            .div1 { 
+                
+                grid-area: 1 / 1 / 2 / 2; 
+                
+
+                img{
+                    width: 30em;
+                }
+            }
+            .div2 { 
+                
+                grid-area: 1 / 2 / 2 / 3; 
+                
+
+                img{
+                    width: 19em;
+                }
+            }
+            .div3 { 
+                grid-area: 2 / 1 / 3 / 2; 
+               
+                img{
+                    width: 20em;
+                }
+            }
+            .div4 { 
+                
+                grid-area: 2 / 2 / 3 / 3; 
+               
+                img{
+                    width: 20em;
+                }
+            }
+
+            .div5{
+                position: absolute;
+                top: 25%;
+                left: 24vw;
+                img{
+                    width: 22em;
+                }
+            }
+            
+        }
+    }
+}
