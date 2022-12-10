@@ -1,0 +1,190 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+        width: .6em;
+        background-color: #994119;
+        border-radius: 1em;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5em;
+        background-color: #A57B51;
+        
+    }
+}
+
+.pageHive{
+    background-image: url(./assets/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+
+    height: 100vh;
+    width: 100vw;
+
+
+    .sectionHive{
+        height: 80vh;
+        width: 100%;
+
+        @include flexbox();
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        
+        .boxBtns{
+            @include flexbox();
+            justify-content: space-between;
+
+            width: 95%;
+            height: 10vh;
+
+
+            
+
+            .boxLeft{
+                @include flexbox();
+                
+                .btnBack{
+                    width: 5em;
+                }
+
+                .btnTittle{
+                    @include flexbox();
+                    position: relative;
+                    img{
+                        width: 14em;
+                    }
+                    h4{
+                        position: absolute;
+                        font-family: "Hansip";
+                        margin: 0;
+                        top: 1em;
+
+                    }
+                }
+            }
+            .boxSelects{
+                @include flexbox();
+                .select{
+                    @include flexbox();
+                    position: relative;
+    
+                    .btn{
+                        width: 12em;
+                    }
+                    h3{
+                        position: absolute;
+                        left: 1.4em;
+                        margin: 0;
+                    }
+                    .icon{
+                        position: absolute;
+                        right: 1.2em;
+                        width: 2.5em;
+                    }
+                }
+            }
+        }
+
+        .cards{
+            width: 90vw;
+            height: 65vh;
+            background-color: rgba(228,226,224, 0.8);
+            border-radius: 1em;
+            border: 0.4em solid #E5B000;
+
+            overflow: hidden;
+            overflow-y: scroll;
+
+            padding: .9em;
+
+            display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: repeat(auto-fill, minmax(16vw, 1fr ));
+            gap: .4em 1em;
+                
+            .card{
+                position: relative;
+            
+                border-radius: 1.9em;
+                border: .3em solid white;
+                background-color: white;
+                
+                width: 11.2em;
+                height: 18em;
+            
+                
+            
+                @include flexbox();
+                flex-direction: column;
+                
+                .bgImg{
+                    height:75%;
+                    width: 100%;
+                    
+                    overflow: hidden;
+                    
+            
+                    img{
+                        
+                        border-radius: 1.9em 1.9em 0 0;
+                        width: 100%;
+                        
+                        
+                    }
+                    
+                }
+                .btnAdd{
+                    position: absolute;
+                    top: 3em; 
+                    width: 5em;
+                }
+            
+                .boxEnter{
+                    position: relative;
+                    @include flexbox();
+                    height: 25%;
+            
+                    .color{
+                        position: absolute;
+                        top: -2em;
+            
+                        background-color: #393939;
+                        width: 2em;
+                        height: 2em;
+            
+                        border-radius: 50%;
+                        border: .2em solid white;
+                    }
+            
+                    button{
+                        @include flexbox();
+                        position: relative;
+            
+                        img{
+                            width: 11em;
+                        }
+                        h4{
+                            font-family: "Hansip";                
+
+                            margin: 0;
+                            position: absolute;
+                            bottom: 0.3em;
+                        }
+                    }
+                }
+                
+            
+            }  
+        }
+    }
+}

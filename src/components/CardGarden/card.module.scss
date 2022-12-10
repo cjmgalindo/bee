@@ -1,0 +1,75 @@
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+
+    border-radius: 1.9em;
+    border: .3em solid white;
+    background-color: white;
+    
+    width: 11.2em;
+    height: 18em;
+
+    
+
+    @include flexbox();
+    flex-direction: column;
+    
+    .bgImg{
+        height:75%;
+        width: 100%;
+        
+        overflow: hidden;
+        
+
+        img{
+            
+            border-radius: 1.9em 1.9em 0 0;
+            width: 100%;
+            
+            
+        }
+        
+    }
+    .tittle{
+        position: absolute;
+        top: 6em;
+    }
+
+    .boxEnter{
+        position: relative;
+        @include flexbox();
+        height: 25%;
+
+        .color{
+            position: absolute;
+            top: -2em;
+
+            background-color: aqua;
+            width: 2em;
+            height: 2em;
+
+            border-radius: 50%;
+            border: .2em solid white;
+        }
+
+        button{
+            @include flexbox();
+            position: relative;
+
+            img{
+                width: 11em;
+            }
+            h4{
+                position: absolute;
+            }
+        }
+    }
+    
+
+}

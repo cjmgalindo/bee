@@ -23,7 +23,11 @@ function Navbar() {
 
         <div className={`${s.btns}`}>
           <ul>
-            <li><img src={icon1} /></li>
+            <li>
+            <NavLink to="/ladeboard">
+              <img src={icon1} />
+            </NavLink>
+            </li>
             <li><img src={icon2} /></li>
           </ul>
         </div>

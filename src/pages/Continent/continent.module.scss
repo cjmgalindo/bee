@@ -24,23 +24,19 @@
         .maps{
             position: relative;
 
-            width: 80vw;
+            width: 85vw;
 
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 40vh);
             
 
-            
-            
-
-            img{
-                width: 19em;
-            }
-
             div{
                 @include flexbox();
                 // border: .5px solid black;
+                // img{
+                //     background-color: red;
+                // }
             }
 
             .div1 { 
@@ -49,8 +45,13 @@
                 
 
                 img{
-                    width: 30em;
+                    width: 27em;
+                    transition: .3s;
+                    &:hover{
+                        width: 30em;
+                    }
                 }
+
             }
             .div2 { 
                 
@@ -59,6 +60,10 @@
 
                 img{
                     width: 19em;
+                    transition: .3s;
+                    &:hover{
+                        width: 23em;
+                    }
                 }
             }
             .div3 { 
@@ -66,6 +71,10 @@
                
                 img{
                     width: 20em;
+                    transition: .3s;
+                    &:hover{
+                        width: 23em;
+                    }
                 }
             }
             .div4 { 
@@ -74,6 +83,10 @@
                
                 img{
                     width: 20em;
+                    transition: .3s;
+                    &:hover{
+                        width: 24em;
+                    }
                 }
             }
 
@@ -83,6 +96,8 @@
                 left: 24vw;
                 img{
                     width: 22em;
+                    transition: .3s;
+                    
                 }
             }
             
