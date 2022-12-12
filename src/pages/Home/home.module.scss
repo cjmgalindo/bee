@@ -81,7 +81,7 @@
                 
 
                 .option{
-                    display: block;
+                    display: none;
                     
                     position: absolute;
                     background-color: #CA6D28;
@@ -115,8 +115,7 @@
                 }
 
                 .option{
-                   display: none;
-                   background-color: red;
+                   display: block;
                 }
            }
             

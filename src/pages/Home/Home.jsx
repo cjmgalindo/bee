@@ -13,10 +13,12 @@ import { NavLink } from 'react-router-dom'
 
 function Home() {
     const [value, setValue] = useState("https://test.google.com")
+    const [active, setActive] =useState(false)
 
     function show(p) {
         setValue(p)
         console.log(p)
+        
     }
 
     // let drown = document.querySelector('.drown');
@@ -33,7 +35,7 @@ function Home() {
 
             <div className={s.content }>
                 <h3>WELCOME....</h3>
-
+{/* asdas */}
                 <div className={s.select} 
                 onClick={(e)=>e.target.classList.toggle(s["activeSelectHome"])}>
                     <div className={s.boxInput}>
