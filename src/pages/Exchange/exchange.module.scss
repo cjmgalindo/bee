@@ -82,13 +82,13 @@
 
             .btns{
                 position: absolute;
-                right: -1.5em;
+                right: -3em;
                 @include flexbox();
                 flex-direction: column;
-                gap: .7em;
+                gap: 1.5em;
 
                 img{
-                    width: 6em;
+                    width: 6.5em;
                 }
 
                 h3{
@@ -104,12 +104,237 @@
         }
 
         .boxChange{
+            position: relative;
             background-color: rgba(41,31,21, 0.8);
+
+            padding: 1.5em 3em;
+
             border-radius: 2em;
             border: 4px solid #9B6334;
 
             width: 55vw;
             height: 70vh;
+            @include flexbox();
+
+            .btns{
+                position: absolute;
+                top: -2.5em;
+                
+                @include flexbox();
+                gap: 2em;
+                width: 100%;
+
+                button{
+                    @include flexbox();
+
+                    img{
+                        width: 11em;
+                        height: 3.3em;
+                    }
+
+                    h3{
+                        font-family: "Hansip";
+                        position: absolute;
+                        top: .5em;
+                        margin: 0;
+                        color: #FEEAA3;
+                        -webkit-text-stroke: .05em #422205;
+                    }
+                }
+                .time{
+                    img{
+                        width: 10em;
+                    }
+                }
+            }
+
+            .exchangeSection{
+                
+                color: #FEEAA3;
+                width: 100%;
+                height: 100%;
+                @include flexbox();
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                h3,h4,h5,p,span{
+                    color: #FEEAA3;
+                    margin: 0;
+                    }
+                .box{
+                    @include flexbox();
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 100%;
+                    
+                    span{
+                        align-self: flex-end;
+                        font-size: 1.2em;
+                    }
+
+                    
+                button{
+                    background-color: #FF861E;
+                    padding: .4em .7em;
+                    border-radius: .5em;
+                    align-self: flex-end;
+                    border: .1em solid black;
+                    margin-top: .4em;
+                }
+                .boxInput{
+                    @include flexbox();
+                    width: 100%;
+                    input{
+                        @include flexbox();
+                        background-color: black;
+                        border-radius: .5em 0 0 .5em;
+                       
+                        border: none;
+                        outline: none;
+                        
+                        width: 100%;
+                        font-size: 1.3em;
+                        padding: .2em 1em;
+                    }
+                    p{
+                        background-color: black;
+                        border-radius: 0 .5em .5em 0;
+                        -webkit-text-stroke: 0;
+                        color: #787878;
+
+                        padding: .2em 1em;
+                        font-size: 1.3em;
+                    }
+                    
+                }
+                }
+                .boxText{
+                    width: 100%;
+                    p{
+                        font-size: 1.2em;
+                    }
+                }
+            }
+            .stakeSection{
+                
+                color: #FEEAA3;
+                width: 100%;
+                height: 100%;
+                @include flexbox();
+                flex-direction: column;
+                justify-content: space-between;
+
+                h3,h4,h5,p,span{
+                    color: #FEEAA3;
+                    margin: 0;
+                }
+
+                .boxYellow{
+                    border-radius: 1em;
+                    background-color: rgba(215, 212, 163, 0.4);
+                    width: 100%;
+                    height: 30vh;
+                    @include flexbox();
+                    justify-content: space-around;
+                    flex-direction: column;
+
+                    .boxOne{
+                        @include flexbox();
+                        flex-direction: column;
+                        div{
+                            display: flex;
+                            gap: 1em;
+                            p{
+                                font-size: 1.4em;
+                                color: white;
+                            }
+                            .xd{
+                                color: #E8CC1A;
+                                -webkit-text-stroke: 0;
+                                letter-spacing: 0;
+                            }
+                        }
+                    }
+                    .boxTwo{
+                        @include flexbox();
+                        justify-content: space-evenly;
+                        width: 100%;
+
+                        .boxDayli{
+                            div{
+                                display: flex;
+                                justify-content: flex-end;
+                                gap: 1em;
+                                p{
+                                    font-size: 1.4em;
+                                    color: white;
+                                }
+                                .xd{
+                                    color: #E8CC1A;
+                                    -webkit-text-stroke: 0;
+                                    letter-spacing: 0;
+                                }
+                            }
+                        }
+                        .boxNext{
+                            p{
+                                font-size: 1.4em;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .boxInput{
+                    @include flexbox();
+                    flex-direction: column;
+                    width: 100%;
+
+                    div{
+                        @include flexbox();
+                        width: 100%;
+                        input{
+                            @include flexbox();
+                        background-color: black;
+                        border-radius: .5em 0 0 .5em;
+                       
+                        border: none;
+                        outline: none;
+                        
+                        width: 100%;
+                        font-size: 1.3em;
+                        padding: .2em 1em;
+                        }
+                        p{
+                            background-color: black;
+                            border-radius: 0 .5em .5em 0;
+                            -webkit-text-stroke: 0;
+                            color: #787878;
+    
+                            padding: .2em 1em;
+                            font-size: 1.3em;
+                        }
+
+                    }
+                }
+                .btnsStake{
+                    width: 50%;
+                    @include flexbox();
+                    justify-content: space-between;
+                    button{
+                        border-radius: .5em;
+                        border: .1em solid black;
+                        
+                        width: 6em;
+                        height: 2.4em;
+                    }
+                    .btnStake{
+                        background-color: #00FF89;
+                    }
+                    .btnUnstake{
+                        background-color: #FF2540;
+                    }
+                }
+            }
         }
     }
 }

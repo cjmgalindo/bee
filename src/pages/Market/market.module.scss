@@ -21,10 +21,16 @@
         flex-direction: column;
 
         .boxCards{
-            background-color: rgba(250, 250, 250, 0.2);
+            background-color: rgba(250, 250, 250, 0.4);
+            height: 65vh;
+            width: 80vw;
+            border-radius: .5em;
 
             .cards{
+                
+                padding: 2rem 3rem;
                 @include flexbox();
+                justify-content: space-evenly;
                 
             }
         }

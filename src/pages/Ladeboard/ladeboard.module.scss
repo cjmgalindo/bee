@@ -1,0 +1,216 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.cards{
+    
+    &::-webkit-scrollbar-track {
+        margin: .7em;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+        width: .4em
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5em;
+        background-color: #48556073;
+    }
+}
+.pageLadeboard{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),url(./assets/background.jpg);
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+
+    height: 100vh;
+    width: 100vw;
+
+    .sectionLadeboard{
+        height: 80vh;
+
+        @include flexbox();
+        flex-direction: column;
+        
+
+        .container{
+            position: relative;
+            background-color: rgba(89, 47, 11, 0.8);
+            border: .4em solid #A5794A;
+            border-radius: 2em;
+            height: 70vh;
+            width: 85vw;
+            padding: 1em 2em;
+            .btns{
+                position: absolute;
+                top: -3em;
+                left: 4em;
+                @include flexbox();
+                gap: 1em;
+
+                button{
+                    @include flexbox();
+
+                    img{
+                        width: 12em;
+                        height: 4em;
+                    }
+
+                    h3{
+                        position: absolute;
+                        margin: 0;
+                    }
+                }
+                .time{
+                    img{
+                        width: 10em;
+                    }
+                }
+            }
+
+
+            .powerSection{
+                
+                // background-color: aqua;
+                height: 60vh;
+
+                overflow: hidden;
+                overflow-y: scroll;
+
+                
+
+                ul{
+                    list-style: none;
+                    margin: 0;
+                    margin-right: 1em;
+                    padding: 0;
+
+                    @include flexbox();
+                    flex-direction: column;
+                    gap: 0.7em;
+
+                    li{
+                        padding: .7em;
+                        width: 100%;
+                    }
+                    p{
+                        margin: 0;
+                        color: #FFEAA6;
+                        font-size: 1.3em;
+                    }
+                }
+                
+                .boxTittle{
+                    display: flex;
+                    justify-content: space-around;
+
+                    border-bottom: 0.3em solid #9B9B9B;
+                }
+                .list{
+                    display: flex;
+                    justify-content: space-around;
+
+                    background-color: rgba(100, 97, 97, 0.5);
+
+                    p{
+                        font-family: "Hansip";
+                    }
+                }
+
+
+
+    
+                &::-webkit-scrollbar-track {
+                    margin: 1em;
+                    padding: 5em;
+                    border-radius: 10px;
+                    background-color: #994119;
+
+                    
+                }
+                &::-webkit-scrollbar {
+                    width: .5em;
+                    
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 5em;
+                    background-color: #A57B51;
+                }
+                
+            }
+
+            .timeSection{
+                
+                // background-color: aqua;
+                height: 60vh;
+
+                overflow: hidden;
+                overflow-y: scroll;
+
+                
+
+                ul{
+                    list-style: none;
+                    margin: 0;
+                    margin-right: 1em;
+                    padding: 0;
+
+                    @include flexbox();
+                    flex-direction: column;
+                    gap: 0.7em;
+
+                    li{
+                        padding: .7em;
+                        width: 100%;
+                    }
+                    p{
+                        margin: 0;
+                        color: #FFEAA6;
+                        font-size: 1.3em;
+                    }
+                }
+                
+                .boxTittle{
+                    display: flex;
+                    justify-content: space-around;
+
+                    border-bottom: 0.3em solid #9B9B9B;
+                }
+                .list{
+                    display: flex;
+                    justify-content: space-around;
+
+                    background-color: rgba(100, 97, 97, 0.5);
+
+                    p{
+                        font-family: "Hansip";
+                    }
+                }
+
+
+
+    
+                &::-webkit-scrollbar-track {
+                    margin: 1em;
+                    padding: 5em;
+                    border-radius: 10px;
+                    background-color: #994119;
+
+                    
+                }
+                &::-webkit-scrollbar {
+                    width: .5em;
+                    
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 5em;
+                    background-color: #A57B51;
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,8 @@
 
 
 
+
+
 .pageBees{
     // background-image: url(./assets/background.jpg);
     background-position: center;
@@ -58,92 +60,44 @@
             
         }
 
-        .cards{
+        .content{
             width: 90vw;
             height: 65vh;
             background-color: rgba(228,226,224, 0.8);
             border-radius: 1em;
-            border: 0.4em solid #E5B000;
+            
+            @include flexbox();
+            justify-content: space-around;
+            
 
-            overflow: hidden;
-            overflow-y: scroll;
-
-            padding: .9em;
-
-            display: grid;
-            grid-auto-rows: auto;
-            grid-template-columns: repeat(auto-fill, minmax(16vw, 1fr ));
-            gap: .4em 1em;
-                
-            .card{
+            .boxGrid{
                 position: relative;
-            
-                border-radius: 1.9em;
-                border: .3em solid white;
-                background-color: white;
-                
-                width: 11.2em;
-                height: 18em;
-            
-                
-            
+
+                background-color: aqua;
+                width: 60vw;
+                height: 65vh;
+
                 @include flexbox();
-                flex-direction: column;
-                
-                .bgImg{
-                    height:75%;
-                    width: 100%;
-                    
-                    overflow: hidden;
-                    
-            
-                    img{
-                        
-                        border-radius: 1.9em 1.9em 0 0;
-                        width: 100%;
-                        
-                        
-                    }
-                    
+
+                .bgHive{
+                    width: 60vw;
                 }
-                .btnAdd{
+                .grid{
                     position: absolute;
-                    top: 3em; 
-                    width: 5em;
+                    width: 55vw;
+                    height: 60vh;
+
+
                 }
-            
-                .boxEnter{
-                    position: relative;
-                    @include flexbox();
-                    height: 25%;
-            
-                    .color{
-                        position: absolute;
-                        top: -2em;
-            
-                        background-color: #393939;
-                        width: 2em;
-                        height: 2em;
-            
-                        border-radius: 50%;
-                        border: .2em solid white;
-                    }
-            
-                    button{
-                        @include flexbox();
-                        position: relative;
-            
-                        img{
-                            width: 11em;
-                        }
-                        h4{
-                            position: absolute;
-                        }
-                    }
-                }
-                
-            
-            }  
+
+            }
+
+            .boxRigth{
+                background-color: #BEA360;
+                border-radius: .7em;
+                width: 25vw;
+                height: 65vh;
+            }
         }
     }
 }
