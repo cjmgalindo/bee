@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './hive.module.scss'
 
 import Navbar from '../../components/Header/Navbar'
@@ -23,6 +23,26 @@ import imgBee from './assets/slot_bee.png'
 
 
 function Hive() {
+    const [vType, setType] = useState("TYPE")
+    const [sType, setActiveType] =useState(false)
+    function showType(p) {
+        setType(p)
+        setActiveType(!sType)
+    }
+
+    const [vPower, setPower] = useState("POWER")
+    const [sPower, setActivePower] =useState(false)
+    function showPower(p) {
+        setPower(p)
+        setActivePower(!sType)
+    }
+
+    const [vSpace, setSpace] = useState("SPACE")
+    const [sSpace, setActiveSpace] =useState(false)
+    function showSpace(p) {
+        setSpace(p)
+        setActiveSpace(!sType)
+    }
   return (
     <>
         <div className={s.pageHive}>
@@ -42,20 +62,45 @@ function Hive() {
                     </div>
 
                     <div className={s.boxSelects}>
-                        <div className={s.select}>
+                        <div className={`${s.select} ${sType ? s.activeSelectType : ""}`} 
+                        onClick={()=>setActiveType(!sType)}>
                             <img src={btnSelect} className={s.btn} />
-                            <h3>TYPE</h3>
+                            <h3>{vType}</h3>
                             <img src={iconSelect} className={s.icon}/>
+
+                            <div className={s.option}>
+                                <div onClick={()=>showType('option 1')}>option 1</div>
+                                <div onClick={()=>showType('option 2')}>option 2</div>
+                                <div onClick={()=>showType('option 3')}>option 3</div>
+                                <div onClick={()=>showType('option 4')}>option 4</div>
+                            </div>
+
                         </div>
-                        <div className={s.select}>
+                        <div className={`${s.select} ${sPower ? s.activeSelectPower : ""}`} 
+                        onClick={()=>setActivePower(!sPower)}>
                             <img src={btnSelect} className={s.btn} />
-                            <h3>POWER</h3>
+                            <h3>{vPower}</h3>
                             <img src={iconSelect} className={s.icon}/>
+                        
+                            <div className={s.option}>
+                                <div onClick={()=>showPower('option 1')}>option 1</div>
+                                <div onClick={()=>showPower('option 2')}>option 2</div>
+                                <div onClick={()=>showPower('option 3')}>option 3</div>
+                                <div onClick={()=>showPower('option 4')}>option 4</div>
+                            </div>
                         </div>
-                        <div className={s.select}>
+                        <div className={`${s.select} ${sSpace ? s.activeSelectSpace : ""}`} 
+                        onClick={()=>setActiveSpace(!sSpace)}>
                             <img src={btnSelect} className={s.btn} />
-                            <h3>SPACE</h3>
+                            <h3>{vSpace}</h3>
                             <img src={iconSelect} className={s.icon}/>
+                        
+                            <div className={s.option}>
+                                <div onClick={()=>showSpace('option 1')}>option 1</div>
+                                <div onClick={()=>showSpace('option 2')}>option 2</div>
+                                <div onClick={()=>showSpace('option 3')}>option 3</div>
+                                <div onClick={()=>showSpace('option 4')}>option 4</div>
+                            </div>
                         </div>
                     </div>
 

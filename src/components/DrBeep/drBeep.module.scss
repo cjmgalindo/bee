@@ -2,7 +2,7 @@
     position: absolute;
     left: 0rem;
     bottom: 1em;
-    padding-left:4em;
+    padding-left: 4em;
     color: white;
     
     height: auto;
@@ -10,8 +10,9 @@
 
 
     .boxUser {
+        
         position: relative;
-        width: 16em; 
+        width: 13em; 
         height: 6em; 
         border-radius: .7em;
         background: rgba(#000000, 0.6);
@@ -20,20 +21,56 @@
 
         display: flex;
         align-items: center;
+        justify-content: center;
 
-        .imgUser{
-            transform: skew(-10deg);
+        .boxImg{
             position: absolute;
+            top: -1em;
             left: -3em;
-            top: -2em;
-            width: 9em;
+            transform: skew(-10deg);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .imgUser{
+                
+                width: 7em;
+            }
+
+            .boxEnergy{
+                position: absolute;
+                top: 5.3em;
+
+                width: 6em;
+                height: 1.5em;
+                background-color: #380f00;
+                border-radius: 2em;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    position: absolute;
+                    width: 1.5em;
+                    left: .3em;
+                    
+                }
+
+                p{
+                    position: absolute;
+                   margin: 0;
+                   right: .9em;
+                }
+            }
         }
 
         
         .boxLetters{
             transform: skew(-10deg);
             position: absolute;
-            left: 6em;
+            left: 4em;
             
             display: flex;
             justify-content: center;
@@ -58,23 +95,26 @@
                 border-radius: 2em;
 
                 display: flex;
-                
                 align-items: center;
 
-                width: 7em;
+                width: 6em;
+                height: 2em;
                 background-color: #380f00;
 
                 img{
                     position: absolute;
-                    top: -1em;
+                    top: -.8em;
                     left: -1em;
                     width: 3em;
                 }
                 .money{
-                    margin-left: 1.62em;
+                    position: absolute;
+                    top: .2em;
+
                     font-family: "Hansip";
                     -webkit-text-stroke: #E5CF8D;
                     color: #E5CF8D;
+                    margin-left: 1.62em;
                 }
 
                 

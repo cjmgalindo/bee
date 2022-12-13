@@ -45,17 +45,76 @@
                 position: relative;
 
                 .btn{
+                    cursor: pointer;
                     width: 12em;
                 }
                 h3{
+                    pointer-events: none;
                     position: absolute;
                     left: 1.4em;
                     margin: 0;
                 }
                 .icon{
                     position: absolute;
+                    pointer-events: none;
+                    transition: .4s;
                     right: 1.2em;
                     width: 2.5em;
+                }
+                .option{
+                    display: none;
+                    
+                    position: absolute;
+                    background-color: #CA6D28;
+                    border: .3em solid #561D05;
+                    border-radius: .5em;
+                    top: 4em;
+                    z-index: 1;
+
+                    div{
+                        width: 8em;
+                        cursor: pointer;
+                        -webkit-text-stroke: 0;
+                        font-size: 1.4em;
+                        transition: .3s;
+                        padding: .2em .8em;
+                        
+                        &:hover{
+                            background-color: #8462498f;
+                            color: #caa810;
+                        }
+                    }
+
+                }
+            }
+            .activeSelectRare{
+
+                .icon{
+                    transform: rotate(180deg);
+                }
+
+                .option{
+                   display: block;
+                }
+            }
+            .activeSelectType{
+
+                .icon{
+                    transform: rotate(180deg);
+                }
+
+                .option{
+                   display: block;
+                }
+            }
+            .activeSelectBee{
+
+                .icon{
+                    transform: rotate(180deg);
+                }
+
+                .option{
+                   display: block;
                 }
             }
         }

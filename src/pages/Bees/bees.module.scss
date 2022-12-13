@@ -4,10 +4,6 @@
     align-items: center;
 }
 
-
-
-
-
 .pageBees{
     // background-image: url(./assets/background.jpg);
     background-position: center;
@@ -62,11 +58,12 @@
 
         .content{
             width: 90vw;
-            height: 65vh;
+            height: 69vh;
             background-color: rgba(228,226,224, 0.8);
             border-radius: 1em;
             
             @include flexbox();
+            align-items: flex-start;
             justify-content: space-around;
             
 
@@ -75,7 +72,7 @@
 
                 background-color: aqua;
                 width: 60vw;
-                height: 65vh;
+                height: 69vh;
 
                 @include flexbox();
 
@@ -96,7 +93,251 @@
                 background-color: #BEA360;
                 border-radius: .7em;
                 width: 25vw;
-                height: 65vh;
+                height: 69vh;
+
+                padding: .5em .5em;
+
+                img{
+                    width: 2em;
+                }
+                h3,h4,p{
+                    margin: 0;
+                }
+                button{
+                    position: relative;
+                    @include flexbox();
+
+                    h3{
+                        position: absolute;
+                    }
+                    
+                }
+
+                .boxOne{
+                    height: 100%;
+                    
+                    .details{
+                       height: 60%;
+                    
+                       @include flexbox();
+                       flex-direction: column;
+                        justify-content: space-evenly;
+                       h4{
+                        align-self: flex-start;
+                       }
+                       .boxBee{
+                        @include flexbox();
+                        justify-content: space-evenly;
+                        width: 100%;
+
+                        .imgBee{
+                            width: 8em;
+                        }
+                        .boxDetaills{
+                            @include flexbox();
+                            flex-direction: column;
+                            gap: .2em;
+
+                            div{
+                                @include flexbox();
+                                justify-content: flex-start;
+                                gap: .5em;
+                                background-color: rgba(0, 0, 0, 0.678);
+                                width: 5em;
+                            }
+                        }
+
+                       }
+                       .boxTimeBlack{
+                            justify-self: center;
+                            @include flexbox();
+                            justify-content: space-evenly;
+
+                            width: 50%;
+                            
+                            background-color: black;
+                            border-radius: .5em;
+                            span{
+                                font-size: 1.2em;
+                                font-family: "Hansip";
+                                margin: 0;
+                            }
+                       }
+                       .btns{
+                        @include flexbox();
+
+                        button{
+                            
+                            img{
+                                width: 8em;
+                                height: 3em;
+                            }
+                            h5{
+                                position: absolute;
+                                top: .9em;
+                                font-family: "Hansip";
+                            }
+                        }
+                       }
+                    }
+
+                    .prod{
+                        @include flexbox();
+                        justify-content: space-evenly;
+                        flex-direction: column;
+                        height: 40%;
+
+                        h4{
+                            align-self: flex-start;
+                            display: inline-block;
+                        }
+                        span{
+                            font-family: "Hansip";
+                        }
+
+                        .boxTimeYellow{
+                            justify-self: center;
+                            @include flexbox();
+                            justify-content: space-evenly;
+
+                            width: 50%;
+                            
+                            background-color: #FFC700;
+                            border-radius: .5em;
+                            span{
+                                font-size: 1.2em;
+                                font-family: "Hansip";
+                                margin: 0;
+                            }
+                        }
+
+                        button{
+                            
+                            img{
+                                width: 8em;
+                                height: 3em;
+                            }
+                            h5{
+                                position: absolute;
+                                top: .9em;
+                                font-family: "Hansip";
+                            }
+                        }
+                    }
+                }
+                .boxTwo{
+                    height: 100%;
+                    
+                    .details{
+                       height: 60%;
+                    
+                       @include flexbox();
+                       flex-direction: column;
+                        justify-content: space-evenly;
+                       h4{
+                        align-self: flex-start;
+                       }
+                       .boxBee{
+                        @include flexbox();
+                        justify-content: space-evenly;
+                        width: 100%;
+
+                        .imgBee{
+                            width: 8em;
+                            border-radius: .5em;
+                        }
+                        .boxDetaills{
+                            @include flexbox();
+                            flex-direction: column;
+                            gap: .2em;
+
+                            div{
+                                @include flexbox();
+                                justify-content: flex-start;
+                                gap: .5em;
+                                background-color: rgba(0, 0, 0, 0.678);
+                                width: 5em;
+                            }
+                        }
+
+                       }
+                       .boxTimeBlack{
+                            justify-self: center;
+                            @include flexbox();
+                            justify-content: space-evenly;
+
+                            width: 50%;
+                            
+                            background-color: black;
+                            border-radius: .5em;
+                            span{
+                                font-size: 1.2em;
+                                font-family: "Hansip";
+                                margin: 0;
+                            }
+                       }
+                       .btns{
+                        @include flexbox();
+
+                        button{
+                            
+                            img{
+                                width: 8em;
+                                height: 3em;
+                            }
+                            h5{
+                                position: absolute;
+                                top: .9em;
+                                font-family: "Hansip";
+                            }
+                        }
+                       }
+                    }
+
+                    .prod{
+                        @include flexbox();
+                        justify-content: space-evenly;
+                        flex-direction: column;
+                        height: 40%;
+
+                        h4{
+                            align-self: flex-start;
+                            display: inline-block;
+                        }
+                        span{
+                            font-family: "Hansip";
+                        }
+
+                        .boxTimeYellow{
+                            justify-self: center;
+                            @include flexbox();
+                            justify-content: space-evenly;
+
+                            width: 50%;
+                            
+                            background-color: #FFC700;
+                            border-radius: .5em;
+                            span{
+                                font-size: 1.2em;
+                                font-family: "Hansip";
+                                margin: 0;
+                            }
+                        }
+
+                        button{
+                            
+                            img{
+                                width: 8em;
+                                height: 3em;
+                            }
+                            h5{
+                                position: absolute;
+                                top: .9em;
+                                font-family: "Hansip";
+                            }
+                        }
+                    }
+                }
             }
         }
     }

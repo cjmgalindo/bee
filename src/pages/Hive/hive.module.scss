@@ -77,6 +77,7 @@
                 .select{
                     @include flexbox();
                     position: relative;
+                    cursor: pointer;
     
                     .btn{
                         width: 12em;
@@ -90,6 +91,60 @@
                         position: absolute;
                         right: 1.2em;
                         width: 2.5em;
+                        transition: .4s;
+                    }
+                    .option{
+                        display: none;
+                        
+                        position: absolute;
+                        background-color: #CA6D28;
+                        border: .3em solid #561D05;
+                        border-radius: .5em;
+                        top: 4em;
+                        z-index: 1;
+    
+                        div{
+                            width: 7em;
+                            cursor: pointer;
+                            -webkit-text-stroke: 0;
+                            font-size: 1.4em;
+                            transition: .3s;
+                            padding: .2em .8em;
+                            
+                            &:hover{
+                                background-color: #8462498f;
+                                color: #caa810;
+                            }
+                        }
+    
+                    }
+                }
+
+                .activeSelectType{
+                    .icon{
+                        transform: rotate(180deg);
+                    }
+    
+                    .option{
+                       display: block;
+                    }
+                }
+                .activeSelectPower{
+                    .icon{
+                        transform: rotate(180deg);
+                    }
+    
+                    .option{
+                       display: block;
+                    }
+                }
+                .activeSelectSpace{
+                    .icon{
+                        transform: rotate(180deg);
+                    }
+    
+                    .option{
+                       display: block;
                     }
                 }
             }

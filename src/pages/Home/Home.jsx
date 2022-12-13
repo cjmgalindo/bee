@@ -17,7 +17,7 @@ function Home() {
 
     function show(p) {
         setValue(p)
-        console.log(p)
+        setActive(!active)
         
     }
 
@@ -36,8 +36,8 @@ function Home() {
             <div className={s.content }>
                 <h3>WELCOME....</h3>
 {/* asdas */}
-                <div className={s.select} 
-                onClick={(e)=>e.target.classList.toggle(s["activeSelectHome"])}>
+                <div className={`${s.select} ${active ? s.activeSelectHome : ""}`} 
+                onClick={()=>setActive(!active)}>
                     <div className={s.boxInput}>
                         <p >{value}</p>
                         <img src={iconOptions} className={s.icon} />

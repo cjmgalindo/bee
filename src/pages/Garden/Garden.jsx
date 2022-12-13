@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './garden.module.scss'
 
 import DrBeep from '../../components/DrBeep/DrBeep'
@@ -22,7 +22,14 @@ import btnEnter from './assets/card_button.png'
 import { NavLink } from 'react-router-dom'
 
 function Garden() {
-    
+    const [value, setValue] = useState("TYPE")
+    const [active, setActive] =useState(false)
+
+    function show(p) {
+        setValue(p)
+        setActive(!active)
+        
+    }
 
   return (
     <>
@@ -40,10 +47,19 @@ function Garden() {
                            <h4>GREENHOUS</h4>
                         </div>
                     </div>
-                    <div className={s.select}>
+
+                    <div className={`${s.select} ${active ? s.activeSelectGarden : ""}`} 
+                    onClick={()=>setActive(!active)}>
                         <img src={btnSelect} className={s.btn} />
-                        <h3>TYPE</h3>
+                        <h3>{value}</h3>
                         <img src={iconSelect} className={s.icon}/>
+
+                        <div className={s.option}>
+                            <div onClick={()=>show('option 1')}>option 1</div>
+                            <div onClick={()=>show('option 2')}>option 2</div>
+                            <div onClick={()=>show('option 3')}>option 3</div>
+                            <div onClick={()=>show('option 4')}>option 4</div>
+                        </div>
                     </div>
 
                 </div>
