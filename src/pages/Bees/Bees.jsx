@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './bees.module.scss'
 
 import DrBeep from '../../components/DrBeep/DrBeep'
@@ -8,15 +8,18 @@ import imgBack from './assets/back.png'
 import btn from './assets/buttons.png'
 import { NavLink } from 'react-router-dom'
 import hiveBees from './assets/hive_bees.png'
+import beeCard from './assets/bee_card.png'
 
 import imgPower from './assets/power.png'
 import imgRare from './assets/rare.png'
 import imgBee from './assets/bee_worker.png'
 import addCard from './assets/addCard.png'
+import AddCard from '../../components/Modals/CardsAdd/AddCard'
 
 
 
 function Bees() {
+  const [eAddCard, setAddCard] = useState(false);
   return (
     <>
         <div className={s.pageBees}>
@@ -116,7 +119,7 @@ function Bees() {
                         <h4>DETAILS:</h4>
                       
                         <div className={s.boxBee}>
-                          <img src={addCard} className={s.imgBee}/>
+                          <img src={addCard} className={s.imgBee} onClick={()=> setAddCard(!eAddCard)}/>
                       
                           <div className={s.boxDetaills}>
                             <div>
@@ -183,6 +186,8 @@ function Bees() {
             </section>
 
             <DrBeep />
+
+            <AddCard state={eAddCard} setstate={setAddCard} imgCard={beeCard}/>
         </div>
        
     </>

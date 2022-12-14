@@ -9,7 +9,19 @@ import btnConfirm from './assets/button2.png'
 
 function BuyEnergy({state, setstate}) {
 
-    const [value, setValue] = useState(84);
+    function handleInputChange(e) {
+        let target = e.target
+        // if (e.target.type !== 'range') {
+        //   target = document.getElementById('range')
+        // } 
+        const min = target.min
+        const max = target.max
+        const val = target.value
+        
+        target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+      }
+
+    const [value, setValue] = useState(50);
   return (
     <>
         {state &&
@@ -20,7 +32,7 @@ function BuyEnergy({state, setstate}) {
                 
                     <button className={s.tittle}>
                         <img src={header} />
-                        <h3>BUY ENERGY</h3>
+                        <h4>BUY ENERGY</h4>
                     </button>
 
                     <p className={s.text}>Time to rechange your energy</p>
@@ -28,9 +40,9 @@ function BuyEnergy({state, setstate}) {
                     <div className={s.boxRange}>
                         <img src={energy}/>
                         <div className={s.boxValue}>{value}</div>
-                        <label for="vol">
-                            <input type="range" id="vol" name="vol" min="0" max="100" onChange={(e)=>setValue(e.target.value)}/>
-                        </label>
+                        
+                        <input type="range" id="vol" name="vol" min="0" max="100" onChange={(e)=>setValue(e.target.value)} onInput={(e)=>handleInputChange(e)}/>
+                        
                     
                     </div>
 
@@ -40,7 +52,7 @@ function BuyEnergy({state, setstate}) {
                     </div>
                     <button className={s.btnConfirm}>
                         <img src={btnConfirm} />
-                        <h4>CONFIRM</h4>
+                        <h5>CONFIRM</h5>
                     </button>
                 </div> 
             </div>

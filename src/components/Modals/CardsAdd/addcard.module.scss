@@ -1,0 +1,163 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+        width: .8em;
+        background-color: #080903;
+        border-radius: 1em;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5em;
+        background-color: #D1C87D;
+        
+    }
+}
+
+.containerModalAddCard{
+    height: 100vh;
+    width: 100vw;
+
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    background:rgba(71, 31, 13, 0.8);
+
+    @include flexbox();
+
+    .boxModalAddCard{
+        height: 31em;
+        max-height: 400px;
+        width: 60em;
+        max-width: 600px;
+
+        position: relative;
+
+        border-radius: 1em;
+    	background-color: #64483C;
+        -webkit-text-stroke: 0;
+        color: white;
+        
+        padding: .5em 1.2em;
+
+        margin: 0 20px;
+
+        @include flexbox();
+        flex-direction: column;
+        justify-content: space-around;
+        
+       
+        h3,h4,p{
+            margin: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .btnExit{
+
+            position: absolute;
+            right: -1.9em;
+            top: -1.6em;
+            width: 4em;
+            max-width: 60px;
+        }
+
+        
+        .tittle{
+            @include flexbox();
+            position: relative;
+            img{
+                width: 16em;
+            }
+            h4{
+                position: absolute;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+            }
+        }
+        
+        .text{
+            align-self: flex-start;
+            font-size: 1em;
+                -webkit-text-stroke: 0;
+                font-family: "Hansip";  
+        }
+
+        .cards{
+            height: 17em;
+            width: 100%;
+padding: 0 0 0;
+
+            overflow: hidden;
+            overflow-y: scroll;
+            @include flexbox();
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 1em;
+
+            .card{
+                position: relative;
+                
+                width: 11em;
+                
+
+
+                img{
+                    width: 11em;
+                    pointer-events: none;
+                }
+
+                div{
+                    @include flexbox();
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: black;
+                    border-radius: .5em;
+                    width: 3em;
+                    height: 3em;
+                    pointer-events: none;
+
+
+                    img{
+                        display: none;
+                        width: 2em;
+                    }
+                }
+
+                
+            }
+            .select{
+                    div{
+                        img{
+                            display: block
+                        }
+                    }
+                }
+        }
+
+        .btnConfirm{
+            @include flexbox();
+            position: relative;
+            img{
+                width: 10em;
+            }
+            h5{
+                position: absolute;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+            }
+        }
+    }
+    
+}

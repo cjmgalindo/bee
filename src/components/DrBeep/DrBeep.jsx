@@ -7,7 +7,7 @@ import energy from './assets/energy.png'
 import BuyEnergy from '../Modals/BuyEnergy/BuyEnergy'
 
 function DrBeep() {
-  const [eDrBeep, setDrBeep] = useState(true);
+  const [eDrBeep, setDrBeep] = useState(false);
 
   return (
     <div className={s.drBeep } >

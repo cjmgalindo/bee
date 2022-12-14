@@ -17,9 +17,13 @@ import gFour from './assets/garden04.jpg'
 import gFive from './assets/garden05.jpg'
 import cardAdd from './assets/cardAdd.png'
 import btnAdd from './assets/plus_icon.png'
+import gardenCard from './assets/garden_card.png'
 
 import btnEnter from './assets/card_button.png'
 import { NavLink } from 'react-router-dom'
+import AddCard from '../../components/Modals/CardsAdd/AddCard'
+
+
 
 function Garden() {
     const [value, setValue] = useState("TYPE")
@@ -30,6 +34,8 @@ function Garden() {
         setActive(!active)
         
     }
+
+    const [eAddCard, setAddCard] = useState(false);
 
   return (
     <>
@@ -77,7 +83,7 @@ function Garden() {
 
                         </div>
 
-                        <button>
+                        <button onClick={()=> setAddCard(!eAddCard)} >
                             <img src={btnEnter} />
                             <h4>STAKE</h4>
                         </button>
@@ -107,6 +113,8 @@ function Garden() {
 
             </section>
             <DrBeep />
+            
+            <AddCard state={eAddCard} setstate={setAddCard} imgCard={gardenCard}/>
         </div>
        
     </>

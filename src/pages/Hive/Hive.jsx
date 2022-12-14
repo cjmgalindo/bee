@@ -8,9 +8,10 @@ import { NavLink } from 'react-router-dom'
 import cardHive from './assets/hive_bgcard.jpg'
 import cardAdd from './assets/cardAdd.png'
 import btnAdd from './assets/plus_icon.png'
-
+import hiveCard from './assets/hive_card.png'
 import btnEnter from './assets/card_button.png'
 import imgBack from './assets/back.png'
+
 
 import btn from './assets/button_tittlehive.png'
 import btnSelect from './assets/but_options.png'
@@ -20,6 +21,7 @@ import CardHive from '../../components/CardHive/CardHive'
 import imgPower from './assets/power.png'
 import imgRare from './assets/rare.png'
 import imgBee from './assets/slot_bee.png'
+import AddCard from '../../components/Modals/CardsAdd/AddCard'
 
 
 function Hive() {
@@ -43,6 +45,10 @@ function Hive() {
         setSpace(p)
         setActiveSpace(!sType)
     }
+
+    const [eAddCard, setAddCard] = useState(false);
+
+
   return (
     <>
         <div className={s.pageHive}>
@@ -115,7 +121,7 @@ function Hive() {
 
                         <div className={s.boxEnter}>
 
-                            <button>
+                            <button onClick={()=> setAddCard(!eAddCard)}>
                                 <img src={btnEnter} />
                                 <h4>STAKE</h4>
                             </button>
@@ -185,6 +191,9 @@ function Hive() {
 
             </section>
             <DrBeep />
+
+            <AddCard state={eAddCard} setstate={setAddCard} imgCard={hiveCard}/>
+
         </div>
        
     </>

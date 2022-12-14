@@ -1,0 +1,108 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar {
+        width: .8em;
+        background-color: #080903;
+        border-radius: 1em;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5em;
+        background-color: #D1C87D;
+        
+    }
+}
+
+.containerModalAddCard{
+    height: 100vh;
+    width: 100vw;
+
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    background:rgba(71, 31, 13, 0.8);
+
+    @include flexbox();
+
+    .boxModalAddCard{
+        height: 25em;
+        max-height: 400px;
+        width: 39em;
+        max-width: 600px;
+
+        position: relative;
+
+        border-radius: 1em;
+    	background-color: #64483C;
+        -webkit-text-stroke: 0;
+        color: white;
+        
+        padding: 1em 1.2em 3em 1.2em;
+
+        margin: 0 20px;
+
+        @include flexbox();
+        flex-direction: column;
+        justify-content: space-around;
+        
+       
+        h3,h4,p{
+            margin: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .btnExit{
+            cursor: pointer;
+            position: absolute;
+            right: -1.9em;
+            top: -1.6em;
+            width: 4em;
+            max-width: 60px;
+        }
+
+        
+        .tittle{
+            @include flexbox();
+            position: relative;
+            img{
+                width: 19em;
+            }
+            h4{
+                position: absolute;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+            }
+        }
+        
+        
+
+        div{
+            @include flexbox();
+            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 1em;
+            P{
+                font-size: 1.5em;
+                font-family: "Hansip";
+                text-align: center;
+                -webkit-text-stroke: 0;
+            }
+            img{
+                width: 8em;
+            }
+        }
+    }
+    
+}

@@ -10,11 +10,14 @@ import btnBuy from './assets/button_red.png'
 import card from './assets/pass_card.png'
 import tabExchange from './assets/tab_bt.png'
 import tabStake from './assets/tab_bt2stake.png'
+import AddCard from '../../components/Modals/CardsAdd/AddCard'
 
 
 function Exchange() {
     const [eExchange, setExchange] = useState(true);
     const [eStake, setStake] = useState(false);
+
+    const [eAddCard, setAddCard] = useState(false);
   return (
     <div className={s.pageExchange}>
         <Navbar />
@@ -41,7 +44,7 @@ function Exchange() {
             <img src={card} className={s.card}/>
 
             <div className={s.btns}>
-                <button>
+                <button onClick={()=> setAddCard(!eAddCard)}>
                     <img src={btnStake} />
                     <h3>STAKE</h3>
                 </button>
@@ -154,6 +157,7 @@ function Exchange() {
         </section>
 
         <DrBeep />
+        <AddCard state={eAddCard} setstate={setAddCard} imgCard={card}/>
       </div>
   )
 }
