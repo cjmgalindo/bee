@@ -30,6 +30,14 @@ function Bees() {
 
   const [eAddCard, setAddCard] = useState(false);
 
+  const blocks = []
+  for (let i = 1; i < 101; i++) {
+    blocks.push(
+      <div className={s.block}>
+        {i}
+      </div>
+    )
+  }
 
   return (
     <>
@@ -55,7 +63,10 @@ function Bees() {
                 <div className={s.content}>
 
                   <div className={s.boxGrid}>
-                    
+                    <div className={s.grid}>
+                      {blocks}
+                    </div>
+
                   </div>
 
                   <div className={s.boxRigth}>
@@ -198,7 +209,7 @@ function Bees() {
 
             <DrBeep />
 
-            <AddCard state={eAddCard} setstate={setAddCard} />
+            <AddCard state={eAddCard} setstate={setAddCard} imgCard={beeCard}/>
 
             <BtnUpLevel state={eLvl} setstate={setLvl} />
             <RemoveModal state={eRemove} setstate={setRemove} />
