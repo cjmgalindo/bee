@@ -1,0 +1,105 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerModalAddCard{
+    height: 100vh;
+    width: 100vw;
+
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    background:rgba(71, 31, 13, 0.8);
+
+    @include flexbox();
+
+    .boxModalAddCard{
+        height: 30em;
+        max-height: 400px;
+        width: 45em;
+        max-width: 600px;
+
+        position: relative;
+
+        border-radius: 1em;
+    	background-color: #64483C;
+        -webkit-text-stroke: 0;
+        color: white;
+        
+        padding: .5em 1.2em;
+
+        margin: 0 20px;
+
+        @include flexbox();
+        flex-direction: column;
+        justify-content: space-around;
+        
+       
+        h3,h4,p{
+            margin: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .btnExit{
+
+            position: absolute;
+            right: -1.9em;
+            top: -1.6em;
+            width: 4em;
+            max-width: 60px;
+        }
+
+        
+        .tittle{
+            @include flexbox();
+            position: relative;
+            img{
+                width: 16em;
+            }
+            h4{
+                position: absolute;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+            }
+        }
+        
+        div{
+            @include flexbox();
+            flex-direction: column;
+            gap: 1em;
+
+            p{
+                font-size: 1.2em;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+                font-family: "Hansip";
+                text-align: center;
+            }
+            img{
+                width: 15em;
+            }
+        }
+        
+
+        .btnConfirm{
+            @include flexbox();
+            position: relative;
+            img{
+                width: 10em;
+            }
+            h5{
+                position: absolute;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+            }
+        }
+    }
+    
+}

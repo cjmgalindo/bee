@@ -15,11 +15,22 @@ import imgRare from './assets/rare.png'
 import imgBee from './assets/bee_worker.png'
 import addCard from './assets/addCard.png'
 import AddCard from '../../components/Modals/CardsAdd/AddCard'
+import BtnUpLevel from '../../components/Modals/Bee/btnUplvl/BtnUpLevel'
+import RemoveModal from '../../components/Modals/Bee/remove/RemoveModal'
+import Claim from '../../components/Modals/Bee/claim/Claim'
+
+
 
 
 
 function Bees() {
+  const [eLvl, setLvl] = useState(false);
+  const [eRemove, setRemove] = useState(false)
+  const [eClaim, setClaim] = useState(false)
+
   const [eAddCard, setAddCard] = useState(false);
+
+
   return (
     <>
         <div className={s.pageBees}>
@@ -147,11 +158,11 @@ function Bees() {
                         </div>
                       
                         <div className={s.btns}>
-                          <button>
+                          <button onClick={()=> setLvl(!eLvl)}>
                             <img src={btn} />
                             <h5>UP LVL</h5>
                           </button>
-                          <button>
+                          <button onClick={()=> setRemove(!eRemove)}>
                             <img src={btn} />
                             <h5>REMOVE</h5>
                           </button>
@@ -169,7 +180,7 @@ function Bees() {
                           <span>00s</span>
                         </div>
                       
-                        <button>
+                        <button onClick={()=> setClaim(!eClaim)}>
                           <img src={btn} />
                           <h5>CLAIM</h5>
                         </button>
@@ -187,7 +198,11 @@ function Bees() {
 
             <DrBeep />
 
-            <AddCard state={eAddCard} setstate={setAddCard} imgCard={beeCard}/>
+            <AddCard state={eAddCard} setstate={setAddCard} />
+
+            <BtnUpLevel state={eLvl} setstate={setLvl} />
+            <RemoveModal state={eRemove} setstate={setRemove} />
+            <Claim state={eClaim} setstate={setClaim} />
         </div>
        
     </>

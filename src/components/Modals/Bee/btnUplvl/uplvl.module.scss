@@ -1,0 +1,175 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerModalAddCard{
+    height: 100vh;
+    width: 100vw;
+
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    background:rgba(71, 31, 13, 0.8);
+
+    @include flexbox();
+
+    .boxModalAddCard{
+        height: 30em;
+        max-height: 400px;
+        width: 45em;
+        max-width: 600px;
+
+        position: relative;
+
+        border-radius: 1em;
+    	background-color: #64483C;
+        -webkit-text-stroke: 0;
+        color: white;
+        
+        padding: .5em 3em;
+
+        margin: 0 20px;
+
+        @include flexbox();
+        flex-direction: column;
+        justify-content: space-around;
+        
+       
+        h3,h4,p{
+            margin: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .btnExit{
+
+            position: absolute;
+            right: -1.9em;
+            top: -1.6em;
+            width: 4em;
+            max-width: 60px;
+        }
+
+        
+        .tittle{
+            @include flexbox();
+            position: relative;
+            img{
+                width: 16em;
+            }
+            h4{
+                position: absolute;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+            }
+        }
+
+        
+        .content{
+            @include flexbox();
+            flex-direction: column;
+            gap: 1em;
+            width: 100%;
+
+            p{
+                font-size: 1.2em;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+                font-family: "Hansip";
+                text-align: center;
+            }
+            
+            .ptext{
+                width: 100%;
+                text-align: start
+            }
+            .counter{
+                @include flexbox();
+                gap: 1em;
+                width: 100%;
+                img{
+                    width: 3em;
+                }
+                div{
+
+                    
+                    @include flexbox();
+                    gap: 1em;
+
+                    button, span{
+                        background-color: #2B1A13; 
+                    }
+                    button{
+                        width: 2em;
+                        height: 2em;
+                        
+                        border-radius: .5em;
+
+                        h1{
+                            margin: 0;
+                            -webkit-text-stroke: 0;
+                            letter-spacing: normal;
+                            font-family: "Hansip";
+                            font-size: 2em;
+                        }
+                    }
+                    span{
+                        width: 3.6em;
+                        height: 2.5em;
+                        border-radius: .5em;
+                        -webkit-text-stroke: 0;
+                        letter-spacing: normal;
+                        font-family: "Hansip";
+                        font-size: 1.4em;
+                        @include flexbox();
+                    }
+                    
+                }
+            }
+
+            .text{
+                width: 100%;
+                @include flexbox();
+                justify-content: start;
+                gap: 1em;
+
+                img{
+                    width: 2em;
+                }
+            }
+
+            .boxTime{
+                background-color: #2B1A13;
+                border-radius: .5em;
+                padding: .5em 2em;
+                span{
+                    -webkit-text-stroke: 0;
+                    letter-spacing: normal;
+                    font-family: "Hansip";
+                    
+                }
+            }
+        }
+        
+
+        .btnConfirm{
+            @include flexbox();
+            position: relative;
+            img{
+                width: 10em;
+            }
+            h5{
+                position: absolute;
+                -webkit-text-stroke: 0;
+                letter-spacing: normal;
+            }
+        }
+    }
+    
+}
