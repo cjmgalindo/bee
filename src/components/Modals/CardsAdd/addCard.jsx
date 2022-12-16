@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import s from './addcard.module.scss'
 
 import btnExit from './assets/exit.png'
@@ -28,8 +28,6 @@ function AddCard({state, setstate, imgCard}) {
             </div>
         )
     }
-
-  
 
   
   return (

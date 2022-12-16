@@ -7,7 +7,7 @@ import Navbar from '../../components/Header/Navbar'
 import imgBack from './assets/back.png'
 import btn from './assets/buttons.png'
 import { NavLink } from 'react-router-dom'
-import hiveBees from './assets/hive_bees.png'
+
 import beeCard from './assets/bee_card.png'
 
 import imgPower from './assets/power.png'
