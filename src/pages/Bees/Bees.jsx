@@ -18,6 +18,7 @@ import AddCard from '../../components/Modals/CardsAdd/AddCard'
 import BtnUpLevel from '../../components/Modals/Bee/btnUplvl/BtnUpLevel'
 import RemoveModal from '../../components/Modals/Bee/remove/RemoveModal'
 import Claim from '../../components/Modals/Bee/claim/Claim'
+import HiveGrid from '../../components/Hive/HiveGrid'
 
 
 
@@ -30,14 +31,7 @@ function Bees() {
 
   const [eAddCard, setAddCard] = useState(false);
 
-  const blocks = []
-  for (let i = 1; i < 101; i++) {
-    blocks.push(
-      <div className={s.block}>
-        {i}
-      </div>
-    )
-  }
+  
 
   return (
     <>
@@ -63,10 +57,7 @@ function Bees() {
                 <div className={s.content}>
 
                   <div className={s.boxGrid}>
-                    <div className={s.grid}>
-                      {blocks}
-                    </div>
-
+                    <HiveGrid />
                   </div>
 
                   <div className={s.boxRigth}>
