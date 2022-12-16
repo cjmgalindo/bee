@@ -7,7 +7,7 @@ import energy from './assets/energy.png'
 import header from './assets/table_header_modal.png'
 import btnConfirm from './assets/button2.png'
 
-function BuyEnergy({state, setstate}) {
+function BuyEnergy( {state, setstate} ) {
 
     function handleInputChange(e) {
         let target = e.target
@@ -28,7 +28,7 @@ function BuyEnergy({state, setstate}) {
             <div className={s.containerModalBuyEnergy}>
 
                 <div className={s.boxModalBuyEnergy}>
-                    <img src={btnExit} className={s.btnExit} onClick={()=> setstate(false)}/>
+                    <img src={btnExit} className={s.btnExit} onClick={()=> setstate(!state)}/>
                 
                     <button className={s.tittle}>
                         <img src={header} />
