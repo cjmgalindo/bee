@@ -15,8 +15,7 @@ import imgRare from './assets/rare.png'
 import imgBee from './assets/bee_worker.png'
 import addCard from './assets/addCard.png'
 
-
-import AddCard from '/src/components/Modals/CardsAdd/AddCard'
+import AddCard from '../../components/Modals/CardsAdd/AddCard'
 import BtnUpLevel from '../../components/Modals/Bee/btnUplvl/BtnUpLevel'
 import RemoveModal from '../../components/Modals/Bee/remove/RemoveModal'
 import Claim from '../../components/Modals/Bee/claim/Claim'
