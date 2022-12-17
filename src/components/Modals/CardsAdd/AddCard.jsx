@@ -26,7 +26,7 @@ function AddCard({state, setstate, imgCard}) {
                     <img src={check} className={s.imgCheck} />
                 </div>
             </div>
-        )
+        )   
     }
 
   
