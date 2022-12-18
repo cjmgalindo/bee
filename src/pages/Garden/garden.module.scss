@@ -5,19 +5,33 @@
 }
 
 .cards{
+    &::-webkit-scrollbar-track-piece:end {
+        background-color: transparent;
+        
+    }
+    
+    &::-webkit-scrollbar-track-piece:start {
+        background: transparent;
+      
+    }
+    
     
     &::-webkit-scrollbar-track {
+        
+    
         border-radius: 10px;
     }
     &::-webkit-scrollbar {
         width: .6em;
         background-color: #994119;
         border-radius: 1em;
+      
     }
     &::-webkit-scrollbar-thumb {
+        height: 120px;
         border-radius: 5em;
         background-color: #A57B51;
-        
+        margin: 1em;
     }
 }
 
@@ -70,6 +84,7 @@
             .select{
                 @include flexbox();
                 position: relative;
+                cursor: pointer;
 
                 .btn{
                     cursor: pointer;
@@ -126,92 +141,102 @@
            }
         }
 
-        .cards{
+        .containerCards{
             width: 90vw;
             height: 65vh;
-            background-color: rgba(228,226,224, 0.8);
-            border-radius: 1em;
+            background-color: rgba( 236,218,179, 0.7);
+            border-radius: 1.3em;
             border: 0.4em solid #E5B000;
 
-            overflow: hidden;
-            overflow-y: scroll;
-
-            padding: .9em;
-
-            display: grid;
-            grid-auto-rows: auto;
-            grid-template-columns: repeat(auto-fill, minmax(16vw, 1fr ));
-            gap: .4em 1em;
+            .cards{
+                width: 99%;
+                height: 100%;
+    
                 
-            .card{
-                position: relative;
-            
-                border-radius: 1.9em;
-                border: .3em solid white;
-                background-color: white;
-                
-                width: 11.2em;
-                height: 18em;
-            
-                
-            
-                @include flexbox();
-                flex-direction: column;
-                
-                .bgImg{
-                    height:75%;
-                    width: 100%;
+                overflow: hidden;
+                overflow-y: scroll;
+    
+                padding: .9em;
+    
+                display: grid;
+                grid-auto-rows: auto;
+                grid-template-columns: repeat(auto-fill, minmax(16vw, 1fr ));
+                gap: 1em;
                     
-                    overflow: hidden;
+                .card{
+                    position: relative;
+                
+                    border-radius: 2.5em 2.5em 0.8em 0.9em;
+                    border: .3em solid white;
+                    background-color: white;
                     
-            
-                    img{
-                        
-                        border-radius: 1.9em 1.9em 0 0;
+                    width: 12.5em;
+                    height: 18em;
+                
+                    
+                
+                    @include flexbox();
+                    flex-direction: column;
+                    
+                    .bgImg{
+                        height:75%;
                         width: 100%;
                         
+                        overflow: hidden;
+                        
+                
+                        img{
+                            
+                            border-radius: 2.5em 2.5em 0 0;
+                            width: 100%;
+                            
+                            
+                        }
                         
                     }
-                    
-                }
-                .btnAdd{
-                    position: absolute;
-                    top: 3em; 
-                    width: 5em;
-                }
-            
-                .boxEnter{
-                    position: relative;
-                    @include flexbox();
-                    height: 25%;
-            
-                    .color{
+                    .btnAdd{
                         position: absolute;
-                        top: -2em;
-            
-                        background-color: #393939;
-                        width: 2em;
-                        height: 2em;
-            
-                        border-radius: 50%;
-                        border: .2em solid white;
+                        top: 3em; 
+                        width: 5em;
                     }
-            
-                    button{
-                        @include flexbox();
-                        position: relative;
-            
-                        img{
-                            width: 11em;
-                        }
-                        h4{
-                            position: absolute;
-                        }
-                    }
-                }
                 
-            
-            }  
+                    .boxEnter{
+                        position: relative;
+                        @include flexbox();
+                        height: 25%;
+                
+                        .color{
+                            position: absolute;
+                            top: -1em;
+                
+                            background-color: #393939;
+                            width: 2em;
+                            height: 2em;
+                
+                            border-radius: 50%;
+                            border: .2em solid white;
+                        }
+                
+                        button{
+                            @include flexbox();
+                            position: relative;
+                
+                            img{
+                                width: 10em;
+                            }
+                            h4{
+                                position: absolute;
+                                top: 1em;
+                                font-size: 1em;
+                                font-family: "Hansip";
+                                margin: 0;
+                            }
+                        }
+                    }
+                    
+                
+                }  
+            }
         }
     }
 }

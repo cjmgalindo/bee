@@ -36,7 +36,21 @@ function Garden() {
     }
 
     const [eAddCard, setAddCard] = useState(false);
+    const cards= []
+    const colors = ["#FE4447","#00A5F5", "#00AF64","#FE4447","#FFA708","#FE4447","#00A5F5", "#00AF64","#FE4447","#FFA708","#FE4447","#00A5F5", "#00AF64","#FE4447","#FFA708","#FE4447","#00A5F5", "#00AF64","#FE4447","#FFA708"]
 
+    for (let i = 2; i < 21; i++) {
+        if(i<10){
+            cards.push(
+                <Card img={gOne} btn={btnEnter} tittle={"Garden 0"+ i} color={colors[i-1]} key={i}/>
+            )
+        } else{
+            cards.push(
+                <Card img={gOne} btn={btnEnter} tittle={"Garden "+ i} color={colors[i-1]} key={i}/>
+            )
+        }
+        
+    }
   return (
     <>
         <div className={s.pageGarden}>
@@ -69,46 +83,30 @@ function Garden() {
                     </div>
 
                 </div>
-                <div className={s.cards}>
-                    
-                <div className={s.card}>
-                    <div className={s.bgImg}>
-                        <img src={cardAdd} />
-                    </div>
-                    <img src={btnAdd} className={s.btnAdd}/>
 
-                    <div className={s.boxEnter}>
+                <div className={s.containerCards}>
+                    <div className={s.cards}>
                         
-                        <div className={s.color} >
-
+                        <div className={s.card}>
+                            <div className={s.bgImg}>
+                                <img src={cardAdd} />
+                            </div>
+                            <img src={btnAdd} className={s.btnAdd}/>
+                        
+                            <div className={s.boxEnter}>
+                                
+                                <div className={s.color} >
+                        
+                                </div>
+                        
+                                <button onClick={()=> setAddCard(!eAddCard)} >
+                                    <img src={btnEnter} />
+                                    <h4>STAKE</h4>
+                                </button>
+                            </div>
                         </div>
-
-                        <button onClick={()=> setAddCard(!eAddCard)} >
-                            <img src={btnEnter} />
-                            <h4>STAKE</h4>
-                        </button>
+                        {cards}
                     </div>
-                </div>
-                    <Card img={gTwo} btn={btnEnter} tittle="Garden 02" color="#00A5F5"/>
-                    <Card img={gThree} btn={btnEnter} tittle="Garden 03" color="#00AF64"/>
-                    <Card img={gFour} btn={btnEnter} tittle="Garden 04" color="#FE4447"/>
-                    <Card img={gFive} btn={btnEnter} tittle="Garden 05" color="#FFA708"/>
-                    <Card img={gOne} btn={btnEnter} tittle="Garden 06" color="#FE4447"/>
-                    <Card img={gTwo} btn={btnEnter} tittle="Garden 07" color="#00A5F5"/>
-                    <Card img={gThree} btn={btnEnter} tittle="Garden 08" color="#00AF64"/>
-                    <Card img={gFour} btn={btnEnter} tittle="Garden 09" color="#FE4447"/>
-                    <Card img={gFive} btn={btnEnter} tittle="Garden 10" color="#FFA708"/>
-                    <Card img={gOne} btn={btnEnter} tittle="Garden 11" color="#FE4447"/>
-                    <Card img={gTwo} btn={btnEnter} tittle="Garden 12" color="#00A5F5"/>
-                    <Card img={gThree} btn={btnEnter} tittle="Garden 13" color="#00AF64"/>
-                    <Card img={gFour} btn={btnEnter} tittle="Garden 14" color="#FE4447"/>
-                    <Card img={gFive} btn={btnEnter} tittle="Garden 15" color="#FFA708"/>
-                    <Card img={gOne} btn={btnEnter} tittle="Garden 16" color="#FE4447"/>
-                    <Card img={gTwo} btn={btnEnter} tittle="Garden 17" color="#00A5F5"/>
-                    <Card img={gThree} btn={btnEnter} tittle="Garden 18" color="#00AF64"/>
-                    <Card img={gFour} btn={btnEnter} tittle="Garden 19" color="#FE4447"/>
-                    <Card img={gFive} btn={btnEnter} tittle="Garden 20" color="#FFA708"/>
-
                 </div>
 
             </section>

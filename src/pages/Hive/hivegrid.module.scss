@@ -1,0 +1,87 @@
+.grid {
+    width: 50vw;
+    height: 50vh;
+
+    overflow: hidden;
+    overflow-y: scroll;
+
+
+    &::-webkit-scrollbar {
+    width: .3em;
+    background: #ffb30024;
+    }
+
+    &::-webkit-scrollbar-thumb {
+    background-color: gold;
+    border-radius: 10px;
+    }
+
+}
+
+
+
+
+$block-size: 3; //Change this value
+$scrollbar-size: 15;
+
+$grid-cell-height: 6em;
+
+
+
+
+.grid {
+	display: grid;
+	// width: auto;
+	justify-content: center;
+	
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fit, $block-size + em);
+	grid-template-rows: repeat(
+		auto-fit,
+		6em
+	);
+	
+	grid-auto-rows: $grid-cell-height;
+	
+}
+
+.grid > * {
+	-webkit-clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+	clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+.block {
+	position: relative;
+	height: 2 * $block-size + em;
+	background-color: gold;
+	grid-column: 2 span;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	&:hover {
+		background-color: tomato;
+	}
+}
+
+
+
+@for $i from ($block-size * 3) through 2000 {
+	@if ($i % $block-size == 0) {
+		$counter: $i / $block-size;
+
+		@media screen and (min-width: #{($counter) * $block-size + $scrollbar-size}em ) and (max-width: #{($counter + 1) * $block-size - 1 + $scrollbar-size}em) {
+			$first: floor($counter / 2) + 1;
+			.block:nth-child(#{$first}),
+			.block:nth-child(#{$counter - 1}n + #{$counter + $first - 1}) {
+				grid-column: 2 / span 2;
+			}
+		}
+
+	}
+}
+
+
+
+
+
