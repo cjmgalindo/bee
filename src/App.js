@@ -12,7 +12,7 @@ import Home from './pages/Home/Home';
 import Inventory from './pages/Inventory/Inventory';
 import Ladeboard from './pages/Ladeboard/Ladeboard';
 import Market from './pages/Market/Market';
-import Rende from './Rende';
+
 
 //Desert
 import cDesertGarden from './assets/mediaContinents/Desert/1.png'

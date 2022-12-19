@@ -99,11 +99,11 @@ function Bees( {img,link}) {
                         </div>
                       
                         <div className={s.btns}>
-                          <button>
+                        <button onClick={()=> setLvl(!eLvl)}>
                             <img src={btn} />
                             <h5>UP LVL</h5>
                           </button>
-                          <button>
+                          <button onClick={()=> setRemove(!eRemove)}>
                             <img src={btn} />
                             <h5>REMOVE</h5>
                           </button>
@@ -121,7 +121,7 @@ function Bees( {img,link}) {
                           <span>12s</span>
                         </div>
                       
-                        <button>
+                        <button onClick={()=> setClaim(!eClaim)}>
                           <img src={btn} />
                           <h5>CLAIM</h5>
                         </button>
