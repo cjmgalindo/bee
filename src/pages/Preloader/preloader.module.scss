@@ -1,0 +1,59 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.PagePreloader{
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #202020;
+
+    @include flexbox();
+    
+    .containerLoader{
+        @include flexbox();
+        flex-direction: column;
+        gap: .5em;
+
+        img{
+            width: 12em;
+        }
+        p{
+            font-size: 1.4em;
+        }
+        .loader{
+            height: 1.3em;
+            width: 20em;
+            background-color: #414141;
+            position: relative;
+            border-radius: 1.5em;
+
+            &::before{
+                content: "";
+                border-radius: 1.5em;
+                position: absolute;
+                background: #FFB200;
+                width: 0;
+                height: 1.3em;
+
+                animation: loader 10s infinite;
+            }
+        }
+    }
+    
+}
+
+@keyframes loader {
+    
+    90% {
+        width: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}

@@ -37,16 +37,27 @@ import cVolcanGarden from './assets/mediaContinents/Volcan/5.png'
 import cVolcanGarden1 from './assets/mediaContinents/Volcan/6.png'
 import bgVolcan from './assets/mediaContinents/Volcan/bg1.jpg'
 import bgVolcan1 from './assets/mediaContinents/Volcan/bg2.jpg'
+import Preloader from './pages/Preloader/Preloader';
+import { useEffect, useState } from 'react';
 
 
 
 
 function App() {
+
+  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false);
+    },8000);
+  }, [])
+
   return (
     <>
       <div className="App">
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path='/' element={loading ? <Preloader /> : <Home />}/>
 
           <Route path='/continents' element={<Continent />}>
 
