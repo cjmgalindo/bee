@@ -31,6 +31,7 @@
             height: 70vh;
 
             @include flexbox();
+            justify-content: space-evenly;
             flex-direction: column;
             
             // img{
@@ -58,26 +59,28 @@
             }
 
             .time{
+                margin-top: 2.7em;
                 @include flexbox();
                 gap: 0.2em;
-                height: 15px;
+                height: 1em;
                 width: 100%;
 
                 .tm{
                     @include flexbox();
                     background-color: #20171A;
                     border-radius: 5px;
-                    -webkit-text-stroke: 0;
+                    padding: 0.4em 0.6em 0.2em 0.6em ;
                     font-family: 'Hansip';
                    
-                    width: 2em;
-                    height: 1.5em;
+          
+
                     
                 }
             }
 
             .card{
-                width: 15em;
+                width: 23vw;
+                
             }
 
             .btns{
