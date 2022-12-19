@@ -18,13 +18,13 @@ function Validation( {state, setstate } ) {
                 
                     <button className={s.tittle}>
                         <img src={header} />
-                        <h4>PROCESSING</h4>
+                        <h5>PROCESSING</h5>
                     </button>
 
-                   <div>
+                   
                      <p>Validating transaction, please <br /> wait a moment....</p>
                      <img src={imgBee} />
-                   </div>
+                   
 
                     
 

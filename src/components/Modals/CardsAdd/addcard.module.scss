@@ -37,10 +37,9 @@
     @include flexbox();
 
     .boxModalAddCard{
-        height: 31em;
-        max-height: 400px;
-        width: 60em;
-        max-width: 600px;
+        height: 27em;
+        width: 53em;
+       
 
         position: relative;
 
@@ -49,7 +48,7 @@
         -webkit-text-stroke: 0;
         color: white;
         
-        padding: .5em 1.2em;
+        padding: .5em 2.2em;
 
         margin: 0 20px;
 
@@ -58,18 +57,17 @@
         justify-content: space-around;
         
        
-        h3,h4,p{
+        h3,h4,h5,p{
             margin: 0;
-            letter-spacing: 0.01em;
         }
 
         .btnExit{
 
             position: absolute;
-            right: -1.9em;
-            top: -1.6em;
-            width: 4em;
-            max-width: 60px;
+            right: -1.1em;
+            top: -1.1em;
+            width: 3.5em;
+            
         }
 
         
@@ -77,43 +75,47 @@
             @include flexbox();
             position: relative;
             img{
-                width: 16em;
+                width: 12em;
             }
-            h4{
+            h5{
+                margin: 0;
                 position: absolute;
-                -webkit-text-stroke: 0;
-                letter-spacing: normal;
+                top: 0.5em;
+               
+                text-shadow: none;
             }
         }
         
         .text{
             align-self: flex-start;
             font-size: 1em;
-                -webkit-text-stroke: 0;
-                font-family: "Hansip";  
+            text-shadow: none;
+            font-family: "Hansip";  
         }
 
         .cards{
             height: 17em;
             width: 100%;
-padding: 0 0 0;
+            padding: 0.4em 0;
 
             overflow: hidden;
             overflow-y: scroll;
-            @include flexbox();
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+
+            display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: repeat(4, minmax(5em, 1fr ));
             gap: 1em;
 
             .card{
                 position: relative;
                 
-                width: 10em;
+                width: 100%;
                 
 
 
                 img{
-                    width: 10em;
+                    width: 100%;
+                    
                     pointer-events: none;
                 }
 
@@ -125,7 +127,9 @@ padding: 0 0 0;
                     background-color: black;
                     border-radius: .5em;
                     width: 2em;
+                    max-width: 30px;
                     height: 2em;
+                    max-height: 30px;
                     pointer-events: none;
 
 
@@ -150,12 +154,12 @@ padding: 0 0 0;
             @include flexbox();
             position: relative;
             img{
-                width: 10em;
+                width: 9em;
             }
             h5{
                 position: absolute;
-                -webkit-text-stroke: 0;
-                letter-spacing: normal;
+                top: .45em;
+                text-shadow: none;
             }
         }
     }

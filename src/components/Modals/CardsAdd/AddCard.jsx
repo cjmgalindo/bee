@@ -40,7 +40,7 @@ function AddCard({state, setstate, imgCard}) {
                 
                     <button className={s.tittle}>
                         <img src={header} />
-                        <h4>STAKE ASSET</h4>
+                        <h5>STAKE ASSET</h5>
                     </button>
 
                     <p className={s.text}>Select your asset</p>

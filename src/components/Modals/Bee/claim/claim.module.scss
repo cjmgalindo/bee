@@ -21,10 +21,9 @@
     @include flexbox();
 
     .boxModalAddCard{
-        height: 30em;
-        max-height: 400px;
-        width: 45em;
-        max-width: 600px;
+        height: 27em;
+        width: 37em;
+       
 
         position: relative;
 
@@ -44,29 +43,32 @@
        
         h3,h4,p{
             margin: 0;
-            letter-spacing: 0.01em;
+            
+            text-shadow: none;
         }
 
         .btnExit{
-
+            cursor: pointer;
             position: absolute;
-            right: -1.9em;
-            top: -1.6em;
-            width: 4em;
-            max-width: 60px;
+            right: -1.1em;
+            top: -1.1em;
+            width: 3.5em;
         }
+
 
         
         .tittle{
             @include flexbox();
             position: relative;
             img{
-                width: 16em;
+                width: 12em;
             }
-            h4{
+            h5{
+                margin: 0;
                 position: absolute;
-                -webkit-text-stroke: 0;
-                letter-spacing: normal;
+                top: 0.5em;
+               
+                text-shadow: none;
             }
         }
         
@@ -83,7 +85,7 @@
                 text-align: center;
             }
             img{
-                width: 15em;
+                width: 12em;
             }
         }
         
@@ -92,12 +94,12 @@
             @include flexbox();
             position: relative;
             img{
-                width: 10em;
+                width: 9em;
             }
             h5{
                 position: absolute;
-                -webkit-text-stroke: 0;
-                letter-spacing: normal;
+                top: .45em;
+                text-shadow: none;
             }
         }
     }

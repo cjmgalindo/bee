@@ -18,7 +18,7 @@ function RemoveModal( {state, setstate} ) {
                 
                     <button className={s.tittle}>
                         <img src={header} />
-                        <h4>REMOVE</h4>
+                        <h5>REMOVE</h5>
                     </button>
 
                     <div>

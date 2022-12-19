@@ -24,7 +24,7 @@ function BtnUpLevel( {state, setstate} ) {
                 
                     <button className={s.tittle}>
                         <img src={header} />
-                        <h4>UPP LEVEL</h4>
+                        <h5>UPP LEVEL</h5>
                     </button>
 
                     <div className={s.content}>

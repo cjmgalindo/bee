@@ -17,7 +17,7 @@ function Claim( {state, setstate} ) {
                 
                     <button className={s.tittle}>
                         <img src={header} />
-                        <h4>CLAIM</h4>
+                        <h5>CLAIM</h5>
                     </button>
 
                     <div>

@@ -32,7 +32,7 @@ function BuyEnergy( {state, setstate} ) {
                 
                     <button className={s.tittle}>
                         <img src={header} />
-                        <h4>BUY ENERGY</h4>
+                        <h5>BUY ENERGY</h5>
                     </button>
 
                     <p className={s.text}>Time to rechange your energy</p>
