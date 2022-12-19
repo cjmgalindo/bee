@@ -32,6 +32,7 @@ function Bees() {
 
   const [eAddCard, setAddCard] = useState(false);
 
+  const [eBoxRigth, setBoxRigth] = useState(true)
   
 
   return (
@@ -58,12 +59,13 @@ function Bees() {
                 <div className={s.content}>
 
                   <div className={s.boxGrid}>
-                    <HiveGrid />
+                    <HiveGrid setstate={setBoxRigth}/>
                   </div>
 
                   <div className={s.boxRigth}>
                     
-                    {/* <div className={s.boxOne}>
+                    { eBoxRigth && 
+                    <div className={s.boxOne}>
 
                       <div className={s.details}>
                         <h4>DETAILS:</h4>
@@ -125,9 +127,10 @@ function Bees() {
                         </button>
                       
                       </div>
-                    </div> */}
-
-                    <div className={s.boxTwo}>
+                    </div> }
+                    
+                    {!eBoxRigth &&
+                      <div className={s.boxTwo}>
 
                       <div className={s.details}>
                         <h4>DETAILS:</h4>
@@ -190,6 +193,8 @@ function Bees() {
                       
                       </div>
                     </div>
+                    }
+                    
 
                   </div>
 

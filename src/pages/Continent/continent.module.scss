@@ -32,11 +32,29 @@
             
 
             div{
+                position: relative;
                 @include flexbox();
                 // border: .5px solid black;
                 // img{
                 //     background-color: red;
                 // }
+
+                p{
+                    position: absolute;
+                    font-size: 0em;
+                    top: .5em;
+                    left: 35%;
+                    transition: .5s;
+                }
+
+                &:hover{
+                    p{
+                        position: absolute;
+                        font-size: 2.3em;
+                        top: 1em;
+                    }
+                }
+                
             }
 
             .div1 { 
@@ -92,15 +110,83 @@
 
             .div5{
                 position: absolute;
-                top: 25%;
-                left: 24vw;
-                img{
-                    width: 22em;
-                    transition: .3s;
-                    
+
+                &:hover{
+                    p{
+                        position: absolute;
+                        font-size: 2.3em;
+                        top: 1em;
+                        left: 25%;
+                    }
                 }
             }
             
         }
     }
 }
+
+@media (min-width: 576px) { 
+    .div5{
+       
+        top: 25%;
+        left: 31%;
+        img{
+            width: 21em;
+            
+            
+        }
+  }
+   }
+
+  @media (min-width: 768px) { 
+    .div5{
+        position: absolute;
+        top: 25%;
+        left: 32%;
+        img{
+            width: 25em;
+            transition: .3s;
+            
+        }
+    }
+  }
+
+  @media (min-width: 992px) { 
+    .div5{
+        position: absolute;
+        top: 23%;
+        left: 35%;
+        img{
+            width: 25em;
+            transition: .3s;
+            
+        }
+    }
+   }
+
+  @media (min-width: 1200px) { 
+    .div5{
+        position: absolute;
+        top: 23%;
+        left: 35%;
+        img{
+            width: 20em;
+            transition: .3s;
+            
+        }
+    }
+   
+   }
+
+  @media (min-width: 1400px) { 
+    .div5{
+        position: absolute;
+        top: 20%;
+        left: 34%;
+        img{
+            width: 22em;
+            transition: .3s;
+            
+        }
+    }
+   } 

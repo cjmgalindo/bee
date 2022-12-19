@@ -77,12 +77,12 @@ function Exchange() {
                 <div className={s.exchangeSection}>
 
                     <div className={s.box}>
-                        <h3>DEPOSIT</h3>
+                        <h4>DEPOSIT</h4>
                         <span>Balance: 250</span>
 
                         <div className={s.boxInput}>
-                            <input type="text" placeholder='250'/>
-                            <p>MAX</p>
+                            <input type="text" />
+                            <button>MAX</button>
                         </div>
                         <button>
                             <h5>CONFIRM</h5>
@@ -90,11 +90,11 @@ function Exchange() {
                     </div>
 
                     <div className={s.box}>
-                        <h3>WITHDRAW</h3>
+                        <h4>WITHDRAW</h4>
                         <span>Balance: 200</span>
                         <div className={s.boxInput}>
-                            <input type="text" placeholder='200'/>
-                            <p>MAX</p>
+                            <input type="text" />
+                            <button>MAX</button>
                         </div>
                         <button>
                             <h5>CONFIRM</h5>
@@ -102,7 +102,7 @@ function Exchange() {
                     </div>
 
                     <div className={s.boxText}>
-                        <h4>FEE: 70%</h4>
+                        <h5>FEE: 70%</h5>
                         <p>Lorem ipsum dolor sit amet consectetur.</p>
                     </div>
 
@@ -113,7 +113,7 @@ function Exchange() {
                 <div className={s.stakeSection} >
                     <div className={s.boxYellow}>
                         <div className={s.boxOne}>
-                            <h3>TOTAL STAKED</h3>
+                            <h4>TOTAL STAKED</h4>
                             <div>
                                 <p>852020.55</p>
                                 <p className={s.xd}>XDD</p>
@@ -122,14 +122,14 @@ function Exchange() {
 
                         <div className={s.boxTwo}>
                             <div className={s.boxDayli}>
-                                <h3>DAYLI REWARD</h3>
+                                <h4>DAYLI REWARD</h4>
                                 <div>
                                     <p>5800</p>
                                     <p className={s.xd}>XDD</p>
                                 </div>
                             </div>
                             <div className={s.boxNext}>
-                                <h3>NEXT DROP:</h3>
+                                <h4>NEXT DROP:</h4>
                                 <p>16 : 28 : 07</p>
                                 
                             </div>
@@ -140,8 +140,8 @@ function Exchange() {
                     <div className={s.boxInput}>
                         <h4>YOU STAKED: 250(0.002%)</h4>
                         <div>
-                            <input type="text" placeholder='150' />
-                            <p>MAX</p>
+                            <input type="text" />
+                            <button>MAX</button>
                         </div>
                     </div>
 

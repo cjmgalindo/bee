@@ -27,7 +27,7 @@ import AddCard from '../../components/Modals/CardsAdd/AddCard'
 
 function Garden() {
     const [value, setValue] = useState("TYPE")
-    const [active, setActive] =useState(false)
+    const [active, setActive] = useState(false)
 
     function show(p) {
         setValue(p)

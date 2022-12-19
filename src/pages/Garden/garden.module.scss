@@ -4,6 +4,20 @@
     align-items: center;
 }
 
+@media (max-width: 750px) {
+    .containerCards{
+        width: 100vw;
+        height: 65vh;
+    }
+}
+
+@media (min-width: 751px) {
+    .containerCards{
+        width: 90vw;
+        height: 65vh;
+    }
+}
+
 .cards{
     &::-webkit-scrollbar-track-piece:end {
         background-color: transparent;
@@ -142,21 +156,22 @@
         }
 
         .containerCards{
-            width: 90vw;
-            height: 65vh;
+            
             background-color: rgba( 236,218,179, 0.7);
             border-radius: 1.3em;
             border: 0.4em solid #E5B000;
+            @include flexbox();
 
             .cards{
                 width: 99%;
-                height: 100%;
+                height: 98%;
     
                 
                 overflow: hidden;
                 overflow-y: scroll;
     
-                padding: .9em;
+                margin-top: .9em;
+                padding-bottom: 1em;
     
                 display: grid;
                 grid-auto-rows: auto;
@@ -173,7 +188,7 @@
                     width: 12.5em;
                     height: 18em;
                 
-                    
+                    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.42);
                 
                     @include flexbox();
                     flex-direction: column;

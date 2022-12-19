@@ -50,18 +50,31 @@ $grid-cell-height: 6em;
 	clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 }
 .block {
+	cursor: pointer;
 	position: relative;
-	height: 2 * $block-size + em;
+	height:auto;
 	background-color: gold;
 	grid-column: 2 span;
+
+	font-size: 2em;
+	font-family: "Hansip";
 	
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	transition: .3s;
 	
 	&:hover {
 		background-color: tomato;
 	}
+
+	img{
+		width: 2em;
+	}
+
+
+	
 }
 
 

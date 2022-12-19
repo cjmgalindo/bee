@@ -23,27 +23,32 @@ function Continent() {
               <div className={s.div1}>
                 <NavLink to='/garden'>
                   <img src={green} className={s.imgGreen}  />
+                  <p>Map 01</p>
                 </NavLink>
               </div>
               <div className={s.div2}>
                 <NavLink to='/garden'>
                   <img src={ice} className={s.imgHive}/>
+                  <p>Map 02</p>
                 </NavLink>
               </div>
               <div className={s.div3}>
                 <NavLink to='/garden' >
                   <img src={desert} className={s.imgBees}/>
+                  <p>Map 03</p>
                 </NavLink>
               </div>
               <div className={s.div4}>
                 <NavLink to='/garden'>
                   <img src={volcan} className={s.imgVolcan}/>
+                  <p>Map 04</p>
                 </NavLink>
               </div>
               
               
               <div className={s.div5}>
                 <img src={invisible} />
+                <p>Bloqueado</p>
               </div>
           </div>
 
