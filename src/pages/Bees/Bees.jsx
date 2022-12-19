@@ -25,7 +25,7 @@ import HiveGrid from '../../components/Hive/HiveGrid'
 
 
 
-function Bees() {
+function Bees( {img,link}) {
   const [eLvl, setLvl] = useState(false);
   const [eRemove, setRemove] = useState(false)
   const [eClaim, setClaim] = useState(false)
@@ -37,14 +37,14 @@ function Bees() {
 
   return (
     <>
-        <div className={s.pageBees}>
+        <div className={s.pageBees} style={{backgroundImage: `url(${img.bg})`}}>
             <Navbar />
 
             <section className={s.sectionBees}>
 
                 <div className={s.boxBtns}>
                     <div className={s.boxLeft}>
-                        <NavLink to='/hive'>
+                        <NavLink to={`/continents/hive${link}`}>
                             <img src={imgBack} className={s.btnBack}/>
                         </NavLink>
                         <div className={s.btnTittle}>

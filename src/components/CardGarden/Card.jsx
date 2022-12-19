@@ -4,7 +4,7 @@ import s from './card.module.scss'
 
 
 
-function Card( {img, btn, tittle, color}) {
+function Card( {img, btn, tittle, color, link}) {
   return (
     <div className={s.card}>
         <div className={s.bgImg}>
@@ -19,7 +19,7 @@ function Card( {img, btn, tittle, color}) {
 
             </div>
 
-            <NavLink to='/hive'>
+            <NavLink to={`/continents/hive${link}`}>
                 <button>
                     <img src={btn} />
                     <h4>ENTER</h4>

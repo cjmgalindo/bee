@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import s from './cardhive.module.scss'
 
-function CardHive( {img, btn, tittle, rare, power, bee} ) {
+function CardHive( {link, img, btn, tittle, rare, power, bee} ) {
   return (
     <div className={s.card}>
 
@@ -30,7 +30,7 @@ function CardHive( {img, btn, tittle, rare, power, bee} ) {
             
             <h4 className={s.tittle}>{tittle}</h4>
 
-            <NavLink to='/bees'>
+            <NavLink to={`/continents/bees${link}`}>
                 <button>
                     <img src={btn} />
                     <h4>ENTER</h4>

@@ -24,7 +24,7 @@ import imgBee from './assets/slot_bee.png'
 import AddCard from '../../components/Modals/CardsAdd/AddCard'
 
 
-function Hive() {
+function Hive( {img, link} ) {
     const [vType, setType] = useState("TYPE")
     const [sType, setActiveType] =useState(false)
     function showType(p) {
@@ -51,14 +51,14 @@ function Hive() {
 
   return (
     <>
-        <div className={s.pageHive}>
+        <div className={s.pageHive} style={{backgroundImage: `url(${img.bg})`}}>
             <Navbar />
             <section className={s.sectionHive}>
 
                 <div className={s.boxBtns}>
 
                     <div className={s.boxLeft}>
-                        <NavLink to='/garden'>
+                        <NavLink to={`/continents/garden${link}`}>
                             <img src={imgBack} className={s.btnBack}/>
                         </NavLink>
                         <div className={s.btnTittle}>
@@ -129,63 +129,63 @@ function Hive() {
                                 </button>
                             </div>
                         </div>
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 02"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 02"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
                     
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 03"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 03"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 04"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 04"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 05"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 05"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 06"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 06"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 07"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 07"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 08"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 08"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 09"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 09"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 10"
-                            rare={imgRare} power={imgPower} bee={imgBee}
-                        /><CardHive img={cardHive} btn={btnEnter} tittle="HIVE 11"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 10"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
+                        /><CardHive img={img.card} btn={btnEnter} tittle="HIVE 11"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 12"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 12"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 13"
-                            rare={imgRare} power={imgPower} bee={imgBee}
-                        /><CardHive img={cardHive} btn={btnEnter} tittle="HIVE 14"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 13"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
+                        /><CardHive img={img.card} btn={btnEnter} tittle="HIVE 14"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 15"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 15"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 16"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 16"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 16"
-                            rare={imgRare} power={imgPower} bee={imgBee}
-                        /><CardHive img={cardHive} btn={btnEnter} tittle="HIVE 17"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 16"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
+                        /><CardHive img={img.card} btn={btnEnter} tittle="HIVE 17"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 18"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 18"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 19"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 19"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
-                        <CardHive img={cardHive} btn={btnEnter} tittle="HIVE 20"
-                            rare={imgRare} power={imgPower} bee={imgBee}
+                        <CardHive img={img.card} btn={btnEnter} tittle="HIVE 20"
+                            rare={imgRare} power={imgPower} bee={imgBee} link={link}
                         />
                         
                     

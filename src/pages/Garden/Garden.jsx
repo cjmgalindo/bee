@@ -25,7 +25,7 @@ import AddCard from '../../components/Modals/CardsAdd/AddCard'
 
 
 
-function Garden() {
+function Garden({img, link}) {
     const [value, setValue] = useState("TYPE")
     const [active, setActive] = useState(false)
 
@@ -42,18 +42,18 @@ function Garden() {
     for (let i = 2; i < 21; i++) {
         if(i<10){
             cards.push(
-                <Card img={gOne} btn={btnEnter} tittle={"Garden 0"+ i} color={colors[i-1]} key={i}/>
+                <Card img={img.card} btn={btnEnter} tittle={"Garden 0"+ i} color={colors[i-1]} key={i} link={link}/>
             )
         } else{
             cards.push(
-                <Card img={gOne} btn={btnEnter} tittle={"Garden "+ i} color={colors[i-1]} key={i}/>
+                <Card img={img.card} btn={btnEnter} tittle={"Garden "+ i} color={colors[i-1]} key={i} link={link}/>
             )
         }
         
     }
   return (
     <>
-        <div className={s.pageGarden}>
+        <div className={s.pageGarden} style={{backgroundImage: `url(${img.bg})`}}>
             <Navbar />
             <section className={s.sectionGarden}>
                 
