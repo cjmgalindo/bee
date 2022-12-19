@@ -18,6 +18,14 @@ function Exchange() {
     const [eStake, setStake] = useState(false);
 
     const [eAddCard, setAddCard] = useState(false);
+
+    const [eInput, setInput] = useState({
+        deposit: "",
+        whitdraw: "",
+        stake: "",
+    })
+
+   
   return (
     <div className={s.pageExchange}>
         <Navbar />
@@ -81,8 +89,8 @@ function Exchange() {
                         <span>Balance: 250</span>
 
                         <div className={s.boxInput}>
-                            <input type="text" />
-                            <button>MAX</button>
+                            <input type="text" value={eInput.deposit} onChange={(e)=>setInput({...eInput, deposit: e.target.value})}/>
+                            <button onClick={(e)=> setInput({...eInput, deposit: 250})}>MAX</button>
                         </div>
                         <button>
                             <h5>CONFIRM</h5>
@@ -93,8 +101,8 @@ function Exchange() {
                         <h4>WITHDRAW</h4>
                         <span>Balance: 200</span>
                         <div className={s.boxInput}>
-                            <input type="text" />
-                            <button>MAX</button>
+                            <input type="text" value={eInput.whitdraw} onChange={(e)=>setInput({...eInput, whitdraw: e.target.value})}/>
+                            <button onClick={(e)=> setInput({...eInput, whitdraw: 200})}>MAX</button>
                         </div>
                         <button>
                             <h5>CONFIRM</h5>
@@ -139,9 +147,10 @@ function Exchange() {
 
                     <div className={s.boxInput}>
                         <h4>YOU STAKED: 250(0.002%)</h4>
+                        
                         <div>
-                            <input type="text" />
-                            <button>MAX</button>
+                            <input type="text"  value={eInput.stake} onChange={(e)=>setInput({...eInput, stake: e.target.value})}/>
+                            <button onClick={(e)=> setInput({...eInput, stake: 250})}>MAX</button>
                         </div>
                     </div>
 
