@@ -39,7 +39,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      flex-direction: column;
+      gap: 1em;
       height: 100vh;
       width: 100vw;
 
@@ -52,9 +53,58 @@
       padding-top: 20px;
     }
     
-    .message::after {
-      Content: "Voltee su móvil en modo vertical para ver el contenido.";
+    
+    /* .message::after {
+      Content: "Rotate your phone to view content";
+    } */
+    .iconMessage{
+      width: 5em;
+      animation: animName 5s linear infinite;
+      rotate: 45deg;
     }
+    @keyframes animName {
+      0%{
+         transform: rotate(0deg);
+        }
+       50%{
+         transform: rotate(90deg);
+        }
+      
+       
+     100%{
+         transform: rotate(0deg);
+        }
+     }
+    
+
+    /* .iconMessage{
+      animation-name:tween-landscape;
+      animation-duration:.5s;
+      animation-timing-function:ease-in-out;
+      animation-direction:normal;
+      animation-iteration-count:1;
+      animation-fill-mode:forwards
+  }
+  .iconMessage.slow{
+      animation-duration:2.5s
+  }
+  .iconMessage.infinite{
+      animation-iteration-count:infinite;
+  }
+  .iconMessage\:hover:hover{
+      animation-name:tween-landscape;
+      animation-duration:.5s;
+      animation-timing-function:ease-in-out;
+      animation-direction:normal;
+      animation-iteration-count:1;
+      animation-fill-mode:forwards
+  }
+  .iconMessage\:hover:hover.slow{
+      animation-duration:2.5s
+  }
+  .iconMessage\:hover:hover.infinite{
+      animation-iteration-count:infinite
+  } */
   }
 
 

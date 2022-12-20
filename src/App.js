@@ -39,7 +39,7 @@ import bgVolcan from './assets/mediaContinents/Volcan/bg1.jpg'
 import bgVolcan1 from './assets/mediaContinents/Volcan/bg2.jpg'
 import Preloader from './pages/Preloader/Preloader';
 import { useEffect, useState } from 'react';
-
+import icon from './assets/smartphone (1).png'
 
 
 
@@ -96,7 +96,8 @@ function App() {
         
       </div>
       <span className='message'>
-
+          <img src={icon} className="iconMessage" />
+          <p>"Rotate your phone to view content"</p>
       </span>
     </>
   );
