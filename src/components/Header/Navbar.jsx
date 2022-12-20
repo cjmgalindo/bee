@@ -13,10 +13,10 @@ function Navbar() {
     <header className='container-fluid'>
         <nav>
           <ul>
-            <li>{<NavLink to={'/continents'}><Btn icon={icon1} name={"CONTINENTS"}/></NavLink>}</li>
-            <li>{<NavLink to={'/inventory'}><Btn icon={icon2} name={"INVENTORY"}/></NavLink> }</li>
-            <li>{<NavLink to={'/market'}><Btn icon={icon2} name={"MARKET"}/></NavLink>}</li>
-            <li>{<NavLink to={'/exchange'}><Btn icon={icon2} name={"EXCHANGE"}/></NavLink>}</li>
+          <li>{<NavLink to={'/continents'}><Btn icon={icon1} name={"CONTINENTS"}/></NavLink>}</li>
+            <li>{<Btn icon={icon2} name={"INVENTORY"}/>}</li>
+            <li>{<Btn icon={icon2} name={"MARKET"}/>}</li>
+            <li>{<Btn icon={icon2} name={"EXCHANGE"}/>}</li>
           </ul>
 
         </nav>
@@ -24,9 +24,9 @@ function Navbar() {
         <div className={`${s.btns}`}>
           <ul>
             <li>
-            <NavLink to="/ladeboard">
+            
               <img src={icon1} />
-            </NavLink>
+            
             </li>
             <li><img src={icon2} /></li>
           </ul>
